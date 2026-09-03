@@ -1,0 +1,6 @@
+node_modules/
+dist/
+output/
+.omx/
+*.log
+.codex-http-server.ps1
