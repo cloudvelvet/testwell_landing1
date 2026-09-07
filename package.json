@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "doctor": "npx react-doctor@latest"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -22,6 +23,9 @@
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.1",
+    "react-doctor": "^0.9.13",
+    "react-grab": "^0.2.0",
+    "react-scan": "^0.5.7",
     "tailwindcss": "^3.4.17",
     "typescript": "~5.6.2",
     "vite": "^5.4.14"
