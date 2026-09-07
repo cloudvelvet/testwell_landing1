@@ -1,136 +1,69 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { LINKS } from '@/constants/links';
 import { SITE_CONTENT } from '@/constants/content';
+
+const NAV_LINKS = [LINKS.about, LINKS.myTests] as const;
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { header } = SITE_CONTENT;
-  const headerLinks = [LINKS.respondentGroups, LINKS.questionBank, LINKS.browseTests] as const;
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 30) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 30);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 border-b border-black/10 bg-brand-light/95 backdrop-blur-md transition-all duration-300 ${
-        isScrolled ? 'py-3 shadow-sm' : 'py-4'
-      }`}
-    >
-      <div className="max-w-page mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
-        {/* Brand Logo */}
-        <a
-          href={LINKS.top}
-          className="flex items-center gap-2.5 text-brand-black font-extrabold text-xl tracking-tight group"
-          aria-label="TestWell 랜딩페이지 맨 위로"
-        >
-          <div className="w-7 h-7 rounded-md bg-brand-black flex items-center justify-center text-brand-yellow font-black text-xs transition-transform group-hover:scale-105">
-            TW
-          </div>
-          <span className="tracking-tighter text-2xl font-black">{header.logoText}</span>
+    <header className={`fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-brand-black/95 text-white backdrop-blur-md transition-[padding,box-shadow] duration-200 ${isScrolled ? 'py-3 shadow-sm' : 'py-4'}`}>
+      <div className="mx-auto flex max-w-page items-center justify-between px-6 sm:px-8 lg:px-12">
+        <a href={LINKS.top} className="group flex items-center gap-2.5" aria-label="TestWell 맨 위로">
+          <span className="flex h-7 w-7 items-center justify-center rounded-sm bg-brand-black text-xs font-black text-brand-yellow transition-transform group-hover:-rotate-3">TW</span>
+          <span className="text-xl font-black tracking-tighter text-white sm:text-2xl">{header.logoText}</span>
         </a>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-neutral-700">
+        <nav className="hidden items-center gap-8 text-sm font-semibold text-neutral-300 lg:flex" aria-label="주요 메뉴">
           {header.nav.map((item, index) => (
-            <a
-              key={item}
-              href={headerLinks[index]}
-              className="hover:text-brand-black transition-colors"
-            >
-              {item}
-            </a>
+            <a key={item} href={NAV_LINKS[index]} className="transition-colors hover:text-white">{item}</a>
           ))}
         </nav>
 
-        {/* Desktop Right CTAs */}
-        <div className="hidden lg:flex items-center gap-5">
-          <a
-            href={LINKS.result}
-            className="text-[14px] font-medium text-neutral-700 hover:text-brand-black transition-colors"
-          >
-            {header.resultButton}
-          </a>
-          <a
-            href={LINKS.login}
-            className="text-[14px] font-medium text-neutral-700 hover:text-brand-black transition-colors"
-          >
-            {header.loginButton}
-          </a>
-          <a
-            href={LINKS.browseTests}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-brand-yellow text-brand-black font-bold text-[14px] hover:bg-brand-yellow-hover transition-all duration-200 transform hover:-translate-y-0.5"
-          >
-            <span>{header.ctaButton}</span>
-            <ArrowUpRight className="w-4 h-4" />
+        <div className="hidden items-center gap-5 text-sm font-semibold lg:flex">
+          <a href={LINKS.result} className="text-neutral-300 transition-colors hover:text-white">{header.resultButton}</a>
+          <a href={LINKS.login} className="text-neutral-300 transition-colors hover:text-white">{header.loginButton}</a>
+          <a href={LINKS.questionBank} className="inline-flex items-center gap-1.5 rounded-sm bg-brand-yellow px-4 py-2.5 font-bold text-brand-black transition-colors hover:bg-brand-yellow-hover">
+            {header.ctaButton}
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
           </a>
         </div>
 
-        {/* Mobile Hamburger Toggle */}
         <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 rounded-lg text-brand-black hover:bg-black/5 transition-colors"
-          aria-label={mobileMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
+          type="button"
+          onClick={() => setMobileMenuOpen((open) => !open)}
+          className="rounded-sm p-2 text-white transition-colors hover:bg-white/10 lg:hidden"
+          aria-label={mobileMenuOpen ? '메뉴 닫기' : '메뉴 열기'}
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-navigation"
         >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
-      {/* Mobile Drawer Overlay */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden absolute inset-x-0 top-full bg-brand-light border-b border-black/10 px-6 py-8 shadow-xl transition-all">
-          <nav id="mobile-navigation" className="flex flex-col gap-6 text-lg font-medium text-neutral-800" aria-label="모바일 메뉴">
-            {header.nav.map((item, index) => (
-              <a
-                key={item}
-                href={headerLinks[index]}
-                onClick={() => setMobileMenuOpen(false)}
-                className="hover:text-brand-black transition-colors"
-              >
-                {item}
-              </a>
-            ))}
-            <div className="h-px bg-black/10 my-2" />
-            <div className="flex flex-col gap-3">
-              <a
-                href={LINKS.result}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-base text-neutral-700 hover:text-brand-black"
-              >
-                {header.resultButton}
-              </a>
-              <a
-                href={LINKS.login}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-base text-neutral-700 hover:text-brand-black"
-              >
-                {header.loginButton}
-              </a>
-              <a
-                href={LINKS.browseTests}
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-center gap-2 w-full py-3.5 mt-2 rounded-md bg-brand-yellow text-brand-black font-bold text-base hover:bg-brand-yellow-hover transition-colors"
-              >
-                <span>{header.ctaButton}</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </div>
-          </nav>
-        </div>
-      )}
+      {mobileMenuOpen ? (
+        <nav id="mobile-navigation" className="absolute inset-x-0 top-full grid gap-5 border-b border-white/15 bg-brand-black px-6 py-7 text-base font-semibold shadow-xl lg:hidden" aria-label="모바일 메뉴">
+          {header.nav.map((item, index) => (
+            <a key={item} href={NAV_LINKS[index]} onClick={() => setMobileMenuOpen(false)}>{item}</a>
+          ))}
+          <a href={LINKS.result} onClick={() => setMobileMenuOpen(false)}>{header.resultButton}</a>
+          <a href={LINKS.login} onClick={() => setMobileMenuOpen(false)}>{header.loginButton}</a>
+          <a href={LINKS.questionBank} onClick={() => setMobileMenuOpen(false)} className="mt-1 flex items-center justify-center gap-2 rounded-sm bg-brand-yellow px-5 py-3.5 font-bold text-brand-black">
+            {header.ctaButton}
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+        </nav>
+      ) : null}
     </header>
   );
 };

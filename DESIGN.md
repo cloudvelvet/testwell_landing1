@@ -1,8 +1,21 @@
 # TestWell Landing Prototype Design System
 
+## Current visual direction — 2026-09-07
+
+Result context refinement: retain the two-column aside and dark palette, use `mt-12 sm:mt-16 pt-8`, and reduce the containing section's bottom padding to `pb-16`. Lead sentence is white; supporting interpretation remains neutral-300. Replace the scaling definition with plain-language interpretation guidance, without product claims.
+
+This revision supersedes the earlier cream-section and yellow-band patterns below. SJGOD is the visual reference; TestWell retains its own content and yellow action accent.
+
+- Continuous dark surfaces: `brand-black` for hero/header/footer; `brand-black-subtle` for about and closing CTA.
+- White headings; `neutral-300` body; `neutral-400` labels; `border-white/15` dividers. Yellow remains on actions and small labels only.
+- Hero illustration: existing workshop asset, positioned as a broad decorative background, grayscale/inverted with screen blending, low opacity and a left-to-right dark readability overlay. No text is embedded in it. On mobile it occupies the upper hero only and is more subdued.
+- Participant shortcuts: open dark block with thin top rule, no cream card or yellow top stripe. Full-row links, same accessible heading and ordering.
+- Header navigation and footer keep their structure while switching to on-dark text. Closing CTA uses a yellow button, not a full yellow section.
+- Existing typography, page width and spacing scale remain the source of layout tokens. Hero uses `min-h-[44rem]` at desktop to give the large image room; content can grow naturally. Illustration has explicit dimensions and is eager-loaded in the hero.
+
 ## 1. Atmosphere & Identity
 
-TestWell 랜딩페이지는 별도 캠페인 사이트가 아니라 기존 `testwell.kr` 안에 자연스럽게 이어지는 서비스 안내 화면처럼 느껴져야 한다. SJGOD에서 참고한 따뜻한 크림 면·검정 본문·노랑 행동색을 기본으로 하고, 검정과 노랑의 대비를 전체 행동 흐름에 일관되게 쓴다. 장식보다 실제 기능과 시작 경로가 먼저 읽혀야 하며, 전문성은 별도 연구 발표처럼 보이지 않는 한두 문장으로만 드러낸다.
+TestWell 랜딩페이지는 별도 캠페인 사이트가 아니라 기존 `testwell.kr` 안에 자연스럽게 이어지는 서비스 안내 화면처럼 느껴져야 한다. 따뜻한 크림 면·검정 본문·노랑 행동색을 기본으로 하고, 장식보다 실제 기능과 시작 경로가 먼저 읽히게 한다. 전문성은 연구자 개인 서사가 아니라 질문 구성, 참여 관리, 결과 확인이 연결되는 정보 구조에서 드러낸다.
 
 ## 2. Color
 
@@ -111,28 +124,56 @@ TestWell 랜딩페이지는 별도 캠페인 사이트가 아니라 기존 `test
 
 ### Feature block
 
-- **Structure**: 번호·제목·현재 기능 설명·직접 CTA + 기능 화면 예시
+- **Structure**: 번호·제목·실제 서비스 메뉴 라벨·현재 기능 설명·직접 CTA
 - **Spacing**: 기능 블록 사이 128–176px
-- **Accessibility**: 화면 예시는 실제 제품 데이터가 아닌 경우 명시하고, 핵심 설명은 HTML 텍스트로 제공한다.
+- **Accessibility**: 핵심 설명은 HTML 텍스트로 제공하고, 서비스 메뉴 라벨은 제목보다 낮은 위계로 처리한다.
 - **Motion**: 한 번만 재생되는 opacity/translateY
 
 ### Audience path
 
 - **Structure**: 방문 목적·할 수 있는 일·시작 링크
-- **Variants**: 검사 참여, 결과 확인, 검사 제작·운영
+- **Variants**: 참여자, 검사 운영자
 - **Accessibility**: 제목은 올바른 heading level을 사용하고 링크에 구체적 목적을 쓴다.
 
-### Editorial action rail
+### Participant entry
 
-- **Structure**: 번호·행동 제목·한 줄 설명·직접 링크를 한 줄의 구획으로 배치한다.
-- **Purpose**: 카드 장식보다 방문자가 바로 고를 수 있는 세 가지 시작 경로를 먼저 읽히게 한다.
-- **States**: 링크만 짧게 이동하고, 행 전체는 버튼처럼 보이게 과장하지 않는다.
+- **Structure**: 히어로의 크림색 영역에 내 검사와 결과 확인 링크를 둔다. 각 행 전체가 링크다.
+- **Purpose**: 서비스 정의와 제작 시작은 왼쪽, 기존 참여자의 바로가기는 오른쪽에서 제공한다.
+- **Constraint**: 실제 공개 내검사·결과보기 경로와 같은 이름을 사용하고 로그인 필요를 알린다. 답안지 장식은 사용하지 않는다.
+- **Responsive**: 모바일에서는 제작 버튼 다음에 표시한다. 고정 높이 없이 내용만큼 배치한다.
 
-### Hero flow panel
+### Creation entry clarity
 
-- **Structure**: 데스크톱 히어로의 빈 오른쪽 면에 ‘검사 찾기 → 응답하기 → 결과 확인’의 세 단계만 둔다.
-- **Purpose**: 장식용 도식이 아니라, 처음 방문한 사람이 TestWell이 하는 일을 한눈에 파악하게 한다.
-- **Responsive**: 작은 화면에서는 제목과 CTA의 읽기 흐름을 해치지 않도록 숨긴다.
+- Header의 강조 CTA는 Hero와 동일한 검사 만들기 경로를 사용한다. 내 검사는 일반 탐색 링크와 참여자 패널에 유지한다.
+- Hero 제작 버튼 아래 `mt-3 text-sm text-neutral-300` 안내로 질문 관리에서 시작하며 로그인이 필요함을 알린다. `aria-describedby`로 버튼과 연결한다.
+- 기능 목록은 질문·검사지·참여자라는 관리 대상별로 구분한다. 필수 제작 절차로 오인할 수 있는 순서 번호는 붙이지 않는다.
+
+### Capability list
+
+- **Structure**: 질문 관리, 검사지 구성, 참여자 그룹 관리를 제목·설명·해당 메뉴 링크로 소개한다.
+- **Purpose**: 기능마다 관리하는 대상을 구체적으로 구분한다. 역할 안내와 별도의 운영 과정 섹션은 합친다.
+- **Constraint**: 공개 서비스에서 확인한 기능 이름만 사용한다.
+- **Copy**: 메뉴 구조를 반복하지 않고 질문 한 개, 질문을 묶은 검사지, 참여자 그룹을 구분해서 설명한다. 실제 사례나 제공 결과의 형태를 추측해 넣지 않는다.
+
+### Preparation CTA
+
+- **Structure**: 기존 노랑 CTA 영역에 목적·대상을 묻는 제목과 결과의 사용처를 환기하는 짧은 본문을 둔다. 기존 제작·문의 링크를 유지한다.
+- **Typography**: 기존 제목과 `text-body-regular`를 사용하고 본문 위 간격은 `mt-3`이다.
+- **Constraint**: 연구자 자기소개나 측정 품질 보증 문구를 추가하지 않는다.
+
+### Result context (후속 수정)
+
+- **Structure**: 기능 목록 아래 같은 크림색 섹션 안에 얇은 상단 구분선과 제목·본문을 둔다. 별도 카드, 가짜 점수, 흐름 도식은 사용하지 않는다.
+- **Tokens**: `mt-12 sm:mt-16`, `pt-8`, `gap-6 lg:gap-20`, 기존 0.8fr/1.2fr 그리드, 제목 `text-2xl`, 본문 `text-body-regular`, 라벨·범위 안내 `text-sm`.
+- **Copy boundary**: 척도화와 점수 해석 근거를 일반 설명으로 구분한다. TestWell 자동 분석·척도화 기능으로 소개하지 않는다.
+- **CTA update**: 마지막 노랑 영역은 준비 질문 대신 짧은 제작·문의 안내로 사용한다.
+
+### Editorial illustration
+
+- **Purpose**: 질문 준비와 응답 장면을 표현한 보조 삽화. 실제 TestWell 화면이나 검사 결과의 증거로 사용하지 않는다.
+- **Style**: 크림 바탕, 검정 윤곽, 노랑 소품, 절제한 인쇄 질감. 점수·그래프·문구·뇌·AI 네트워크를 넣지 않는다.
+- **Placement**: 기능 소개 왼쪽 본문 아래 `mt-8`, `w-full max-w-md`, 3:2 비율. 모바일에서는 기능 목록 앞에 표시한다. 테두리·추가 카드는 사용하지 않는다.
+- **Loading**: 명시적 width/height와 lazy loading으로 공간을 예약하고 첫 화면 렌더링을 막지 않는다.
 
 ## 6. Motion & Interaction
 

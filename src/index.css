@@ -13,7 +13,7 @@
   }
 
   body {
-    @apply bg-brand-light text-brand-black;
+    @apply bg-brand-black text-white;
     overflow-x: hidden;
     word-break: keep-all;
   }
