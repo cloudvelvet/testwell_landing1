@@ -1,18 +1,18 @@
 # TestWell 프로토타입 수정 및 운영 가이드
 
 본 프로젝트는 TestWell 메인 랜딩페이지 리디자인 시안을 위한 독립 프론트엔드 프로토타입입니다.  
-복잡한 React/HTML 코드를 다루실 필요 없이, **텍스트 파일 하나만 수정**하면 사이트 전체에 자동 반영되도록 설계되었습니다.
+복잡한 React/HTML 코드를 다루실 필요 없이, 기본 문구와 서비스 링크는 설정 파일에서 관리합니다.
 
 ---
 
 ## 1. 텍스트 및 문구 수정 (가장 추천)
 
-사이트에 들어가는 모든 제목, 본문, 설명, 버튼 이름은 아래 **단 하나의 파일**에 모여 있습니다:
+기본 문구는 아래 파일에서 관리합니다. 역할별 이용 안내는 `src/components/WhatIsTestWell.tsx`, 마지막 안내는 `src/components/FinalCTA.tsx`에 있습니다:
 
 📁 **`src/constants/content.ts`**
 
 ### 수정 예시
-`hero`, `whatIsTestWell`, `whyTestWell`, `finalCta`, `footer` 항목의 한글 문구를 수정하면 각 섹션에 반영됩니다.
+`hero`, `header`, `footer` 항목의 한글 문구를 수정하면 각 섹션에 반영됩니다. 역할별 이용 안내와 하단 문구는 위 컴포넌트에서 수정하세요.
 메모장, VS Code 등 편하신 텍스트 에디터로 위 파일의 한글 텍스트만 변경하고 저장하시면 사이트에 즉시 반영됩니다.
 
 ---
@@ -51,3 +51,6 @@ npm run dev
 1. GitHub 레포지토리에 프로젝트 업로드
 2. [Vercel](https://vercel.com/) 접속 후 `Import Project` 클릭
 3. 별도 설정 없이 `Deploy` 버튼만 누르면 30초 내에 전용 URL(예: `https://testwell-redesign.vercel.app`)이 생성됩니다.
+
+## 현재 첫 화면
+검사 검색은 src/components/Hero.tsx, 공개 검사 목록은 src/components/TestCatalog.tsx, 제작자 링크는 src/components/WhatIsTestWell.tsx에서 관리합니다. 검사 목록은 정적 스냅샷입니다. 배경 삽화는 public/testwell-editorial-hero.png이며 제작 기록은 docs/sjgod-design-reference.md에 있습니다. 이전 작업 미리보기는 화면에 표시하지 않습니다.

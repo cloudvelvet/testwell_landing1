@@ -1,13 +1,14 @@
 import React from 'react';
+import { MotionConfig } from 'framer-motion';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { WhatIsTestWell } from '@/components/WhatIsTestWell';
-import { WhyTestWell } from '@/components/WhyTestWell';
-import { FinalCTA } from '@/components/FinalCTA';
+import { TestCatalog } from '@/components/TestCatalog';
 import { Footer } from '@/components/Footer';
 
 export const App: React.FC = () => {
   return (
+    <MotionConfig reducedMotion="user">
     <div className="min-h-screen bg-brand-light text-brand-black selection:bg-brand-yellow selection:text-brand-black flex flex-col font-sans">
       <a
         href="#main-content"
@@ -18,12 +19,12 @@ export const App: React.FC = () => {
       <Header />
       <main id="main-content" className="flex-grow">
         <Hero />
+        <TestCatalog />
         <WhatIsTestWell />
-        <WhyTestWell />
-        <FinalCTA />
       </main>
       <Footer />
     </div>
+    </MotionConfig>
   );
 };
 

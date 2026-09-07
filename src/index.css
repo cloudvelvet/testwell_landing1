@@ -4,6 +4,8 @@
 
 @layer base {
   html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -21,6 +23,10 @@
   :where(a, button):focus-visible {
     outline: 3px solid theme('colors.brand.yellow');
     outline-offset: 4px;
+  }
+
+  :where(a, button):active {
+    transform: translateY(1px);
   }
 
   h1, h2, h3, h4, h5, h6, p, span {
@@ -41,8 +47,8 @@
 @layer utilities {
   /* Editorial Typography clamping */
   .text-hero {
-    font-size: clamp(2.4rem, 4.8vw, 5.25rem);
-    line-height: 1.05;
+    font-size: clamp(2rem, 3.6vw, 3.75rem);
+    line-height: 1.2;
     letter-spacing: -0.035em;
   }
 
@@ -94,4 +100,92 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* SJGOD reference: dark illustrated opening, large left-aligned type,
+   broad light sections and simple editorial dividers. */
+.testwell-wordmark { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 29px; letter-spacing: -1.2px; }
+.site-header { background: #080808f5 !important; border-bottom-color: #ffffff14 !important; color: white; }
+.site-header a, .site-header button { color: white; }
+.site-header a:hover { color: #d9d9d9; }
+.site-header img { border-radius: 2px; }
+.site-header .header-action { color: #111; background: #fff; }
+.site-header .header-action:hover { color: #111; background: #e7e7e7; }
+.site-header .mobile-panel { background: #111; }
+.service-hero { position: relative; isolation: isolate; overflow: hidden; background: #080808; color: #fff; padding: 225px 48px 72px; min-height: 850px; }
+.service-hero::before { content: ''; position: absolute; inset: 65px 0 0; z-index: -2; background: url('/testwell-editorial-hero.png') 72% 12% / cover no-repeat; opacity: .72; }
+.service-hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg,#080808 0%,#080808d9 30%,#08080830 70%),linear-gradient(0deg,#080808 0%,transparent 75%); }
+.service-hero-inner { max-width: 1264px; margin: 0 auto; }
+.service-eyebrow { margin-bottom: 28px; font-size: 14px; color: #b7b7b7; letter-spacing: .02em; }
+.service-hero h1 { max-width: 950px; font-size: clamp(36px,4.7vw,64px); line-height: 1.24; font-weight: 750; letter-spacing: -.045em; }
+.service-hero-description { max-width: 730px; margin-top: 28px; font-size: 17px; line-height: 1.85; color: #c4c4c4; }
+.test-search { margin-top: 38px; display: flex; align-items: center; background: #fff; padding: 8px; border-radius: 4px; width: 100%; max-width: 760px; color: #182640; }
+.test-search select { flex-shrink: 0; width: 126px; padding: 12px; border-right: 1px solid #ddd; background: white; font-size: 14px; min-height: 46px; }
+.test-search input { min-width: 0; flex: 1; padding: 12px 18px; font-size: 15px; background: transparent; }
+.test-search button { min-height: 48px; padding: 12px 22px; display: flex; align-items: center; justify-content: center; gap: 8px; background: #253858; color: #fff; border-radius: 2px; font-size: 14px; font-weight: 600; }
+.test-search button:hover { background: #182640; }
+.search-destination { margin-top: 12px; font-size: 12px; color: #a3a3a3; }
+.member-paths { margin-top: 38px; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); max-width: 760px; border-top: 1px solid #fff4; }
+.member-paths a { display: flex; align-items: center; gap: 17px; padding: 24px 24px 0 0; min-width: 0; }
+.member-paths a + a { padding-left: 24px; }
+.member-path-icon { color: #b9c6dc; }
+.member-paths strong { display: block; font-size: 18px; font-weight: 600; }
+.member-paths small { display: block; font-size: 13px; margin-top: 5px; color: #a3a3a3; }
+.member-paths a > svg { margin-left: auto; flex-shrink: 0; transition: transform .18s; }
+.member-paths a:hover > svg { transform: translateX(4px); }
+.test-catalog { padding: 110px max(48px,calc((100vw - 1264px)/2)); background: #f6f2ea; color: #111; }
+.catalog-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+.catalog-heading > div > p,.section-kicker { font-family: monospace; font-size: 12px; color: #636366; letter-spacing: .12em; margin-bottom: 20px; }
+.catalog-heading h2 { font-size: clamp(32px,4vw,48px); font-weight: 700; line-height: 1.2; letter-spacing: -.04em; }
+.catalog-heading > a { display: flex; min-height: 44px; align-items: center; gap: 14px; font-size: 14px; font-weight: 600; }
+.catalog-description { font-size: 15px; color: #636366; line-height: 1.8; margin-top: 22px; }
+.catalog-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px; margin-top: 44px; }
+.catalog-test { min-width: 0; border-top: 2px solid #111; }
+.catalog-cover { display: flex; justify-content: space-between; align-items: center; height: 130px; padding: 25px; background: #ede7db; color: #253858; transition: background .2s; }
+.catalog-test:nth-child(even) .catalog-cover { background: #e3e5e7; }
+.catalog-cover > span { font-family: Georgia,serif; font-size: 17px; }
+.catalog-test:hover .catalog-cover { background: #d8d4ca; }
+.catalog-test-body { padding: 23px 0; border-bottom: 1px solid #1113; }
+.catalog-test h3 { font-size: 20px; font-weight: 650; letter-spacing: -.025em; line-height: 1.4; }
+.catalog-test-body p { margin-top: 19px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; color: #636366; }
+.catalog-note { margin-top: 24px; font-size: 12px; color: #636366; }
+.creator-section { background: #fff; padding: 90px max(48px,calc((100vw - 1264px)/2)); display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; color: #111; }
+.creator-section h2 { font-size: clamp(30px,3vw,42px); font-weight: 650; line-height: 1.3; letter-spacing: -.03em; }
+.creator-description { margin-top: 22px; font-size: 16px; line-height: 1.85; color: #636366; }
+.creator-links { border-top: 1px solid #111; }
+.creator-links a { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 25px 0; border-bottom: 1px solid #1113; }
+.creator-links strong { display: block; font-size: 20px; font-weight: 600; }
+.creator-links small { display: block; margin-top: 7px; font-size: 14px; color: #636366; }
+.creator-links a:hover > svg { transform: translate(2px,-2px); }
+.site-footer { background: #080808 !important; color: #aaa !important; border-top-color: #ffffff20 !important; }
+.site-footer .testwell-wordmark { color: #fff; }
+.site-footer p,.site-footer nav,.site-footer nav a,.site-footer .text-neutral-500,.site-footer .text-neutral-700 { color: #aaa; }
+.site-footer .border-black\/10 { border-color: #ffffff20; }
+.site-footer a:hover { color: #fff; }
+@media (max-width: 1000px) {
+ .catalog-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .creator-section { gap: 40px; }
+}
+@media (max-width: 640px) {
+ .service-hero { padding: 155px 24px 44px; min-height: auto; }
+ .service-hero::before { inset: 50px -150px 20%; background-position: 60% top; opacity: .45; }
+ .service-hero h1 { font-size: 36px; }
+ .service-hero-description { font-size: 15px; }
+ .test-search { flex-wrap: wrap; padding: 6px; }
+ .test-search select { width: 110px; font-size: 13px; }
+ .test-search input { width: calc(100% - 110px); flex: 1; padding: 12px; font-size: 13px; }
+ .test-search button { width: 100%; margin-top: 6px; min-height: 44px; }
+ .search-destination { font-size: 11px; }
+ .member-paths { grid-template-columns: 1fr; margin-top: 28px; }
+ .member-paths a,.member-paths a + a { padding: 20px 0; border-bottom: 1px solid #ffffff26; }
+ .test-catalog { padding: 65px 24px; }
+ .catalog-heading { flex-wrap: wrap; gap: 12px; }
+ .catalog-description { margin-top: 14px; font-size: 14px; }
+ .catalog-grid { gap: 26px 16px; margin-top: 28px; }
+ .catalog-cover { height: 90px; padding: 16px; }
+ .catalog-cover > span { display: none; }
+ .catalog-test h3 { font-size: 17px; }
+ .catalog-test-body { padding: 17px 0; }
+ .creator-section { padding: 60px 24px; grid-template-columns: 1fr; gap: 32px; }
+ .testwell-wordmark { font-size: 26px; }
 }

@@ -156,3 +156,10 @@ TestWell 랜딩페이지는 별도 캠페인 사이트가 아니라 기존 `test
 - 카드 면: `neutral-900/60` 또는 `brand-black-card`
 - 그림자: CTA와 대표 시각화에만 사용하며 장식 카드에는 반복하지 않는다.
 - 밝고 어두운 섹션의 큰 tonal shift가 최상위 정보 구조를 만든다.
+
+## Current landing revision — 2026-09-07
+
+The hero uses the cream surface and centered service copy, followed by one wide workspace preview. The preview has three selectable work views; illustrative content is labeled and contains no fictional performance metrics. On mobile, sidebar navigation becomes a horizontal three-button selector. The older dark hero flow-panel and dark editorial statement prescriptions above are superseded by this revision. Yellow remains a small accent; the main creation action uses black. Body copy remains readable, and smaller metadata is limited to labels inside the illustrative workspace. No autoplay or decorative motion is added.
+
+## Current reference — SJGOD
+The explicit visual reference is now https://sjgod.kr/. The dark illustrated hero with large left-aligned white type supersedes the prior centered cream workspace. The catalog stays light, the creator links are secondary, and the footer returns to black. Original TestWell identity and service entry points are preserved. See docs/sjgod-design-reference.md for the image prompt and implementation rationale.

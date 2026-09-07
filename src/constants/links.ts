@@ -9,6 +9,7 @@ export const LINKS = {
   whyTestwell: "#why",
 
   officialSite: "https://testwell.kr/",
+  shop: "https://testwell.kr/shop/sale-goods",
   browseTests: "https://testwell.kr/",
   myTests: "https://testwell.kr/survey/inventory",
   result: "https://testwell.kr/survey/my_status",

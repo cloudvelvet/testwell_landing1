@@ -1,77 +1,32 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, FileCheck2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, ClipboardList, FileCheck2, Search } from 'lucide-react';
 import { LINKS } from '@/constants/links';
-import { SITE_CONTENT } from '@/constants/content';
-import { TestFlowPanel } from '@/components/visuals/TestFlowPanel';
 
 export const Hero: React.FC = () => {
-  const { hero } = SITE_CONTENT;
-
+  const [keyword, setKeyword] = useState('');
+  const [category, setCategory] = useState('0');
+  const search = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!keyword.trim()) return;
+    window.location.assign(`${LINKS.shop}/search/title__contains/${encodeURIComponent(keyword.trim())}/${category}`);
+  };
   return (
-    <section
-      id="top"
-      aria-labelledby="hero-title"
-      className="relative overflow-hidden bg-brand-black pb-24 pt-36 text-white sm:pb-28 sm:pt-44 lg:pb-32"
-    >
-      <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none" />
-      <div className="relative z-10 mx-auto w-full max-w-page px-6 sm:px-8 lg:px-12">
-        <div className="grid items-end gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(21rem,0.65fr)] lg:gap-16">
-          <div className="max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
-            className="mb-6 inline-flex w-fit items-center gap-2 text-sm font-semibold text-white/75"
-          >
-            <span className="h-2 w-2 rounded-full bg-brand-yellow" />
-            <span className="text-brand-yellow">{hero.categoryBadge}</span>
-          </motion.div>
-
-          <motion.h1
-            id="hero-title"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-            className="text-hero font-black tracking-tighter text-balance"
-          >
-            <span className="block">{hero.mainHeadingLine1}</span>{' '}
-            <span className="mt-1 block text-white sm:mt-2">{hero.mainHeadingLine2}</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-7 max-w-2xl text-body-lead font-normal leading-relaxed text-white/80 text-pretty"
-          >
-            {hero.subHeading}
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center"
-          >
-            <a
-              href={LINKS.browseTests}
-              className="inline-flex items-center justify-center gap-3 rounded-md bg-brand-yellow px-7 py-4 font-bold text-brand-black transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-yellow-hover"
-            >
-              <span>{hero.primaryCta}</span>
-              <ArrowRight className="h-5 w-5" aria-hidden="true" />
-            </a>
-            <a
-              href={LINKS.result}
-              className="inline-flex items-center justify-center gap-2.5 rounded-md border border-white/30 px-7 py-4 font-bold text-white transition-colors duration-200 hover:bg-white/10"
-            >
-              <FileCheck2 className="h-5 w-5" aria-hidden="true" />
-              <span>{hero.secondaryCta}</span>
-            </a>
-          </motion.div>
-
-          </div>
-          <TestFlowPanel />
+    <section id="top" aria-labelledby="hero-title" className="service-hero">
+      <div className="service-hero-inner">
+        <p className="service-eyebrow">TestWell · 심리검사와 학습평가</p>
+        <h1 id="hero-title">필요한 검사를 찾고,<br />내 결과를 확인하세요.</h1>
+        <p className="service-hero-description">심리검사부터 학습평가까지.<br className="sm:hidden" /> TestWell에서 검사를 찾아 참여할 수 있습니다.</p>
+        <form className="test-search" onSubmit={search} role="search" aria-label="TestWell 검사 검색">
+          <label className="sr-only" htmlFor="test-category">검사 종류</label>
+          <select id="test-category" value={category} onChange={(event) => setCategory(event.target.value)}><option value="0">심리검사</option><option value="1">학습검사</option></select>
+          <label className="sr-only" htmlFor="test-keyword">검사 이름</label>
+          <input id="test-keyword" type="search" placeholder="검사 이름을 입력하세요" value={keyword} onChange={(event) => setKeyword(event.target.value)} required maxLength={100} />
+          <button type="submit"><Search size={19} aria-hidden="true" /><span>검색</span></button>
+        </form>
+        <p className="search-destination">검색 결과는 TestWell 공식 사이트에서 확인합니다.</p>
+        <div className="member-paths">
+          <a href={LINKS.myTests}><span className="member-path-icon"><ClipboardList size={23} strokeWidth={1.5} aria-hidden="true" /></span><span><strong>내 검사</strong><small>참여할 검사가 있다면</small></span><ArrowRight size={18} aria-hidden="true" /></a>
+          <a href={LINKS.result}><span className="member-path-icon"><FileCheck2 size={23} strokeWidth={1.5} aria-hidden="true" /></span><span><strong>결과 확인</strong><small>진행 상태와 결과를 보려면</small></span><ArrowRight size={18} aria-hidden="true" /></a>
         </div>
       </div>
     </section>
