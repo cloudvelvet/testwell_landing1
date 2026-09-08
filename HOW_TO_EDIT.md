@@ -1,53 +1,36 @@
-# TestWell 프로토타입 수정 및 운영 가이드
+# TestWell 수정·검증 안내
 
-본 프로젝트는 TestWell 메인 랜딩페이지 리디자인 시안을 위한 독립 프론트엔드 프로토타입입니다.  
-복잡한 React/HTML 코드를 다루실 필요 없이, **텍스트 파일 하나만 수정**하면 사이트 전체에 자동 반영되도록 설계되었습니다.
+## 작업 기준
 
----
+작업 브랜치: codex/landing-v3-reference-led. 기준 main: 4e32690. 기존 로컬 폴더의 미커밋 수정은 별도로 보존되어 있다.
 
-## 1. 텍스트 및 문구 수정 (가장 추천)
+## 문구와 링크
 
-사이트에 들어가는 모든 제목, 본문, 설명, 버튼 이름은 아래 **단 하나의 파일**에 모여 있습니다:
+모든 페이지 문구는 src/constants/content.ts, 실제 목적지는 src/constants/links.ts에서 관리한다. 문구 항목의 link 키가 LINKS의 실제 키와 연결된다. 없는 앵커나 추측한 외부 경로를 추가하지 않는다.
 
-📁 **`src/constants/content.ts`**
+Hero, ParticipantEntry, WhatIsTestWell, ProductFlow, MeasurementContext, FinalCTA, Footer는 App에서 조립된다. 스타일은 src/index.css와 기존 tailwind.config.js 토큰을 따른다. 기준 문서는 docs/DESIGN_V3.md다.
 
-### 수정 예시
-`hero`, `whatIsTestWell`, `whyTestWell`, `finalCta`, `footer` 항목의 한글 문구를 수정하면 각 섹션에 반영됩니다.
-메모장, VS Code 등 편하신 텍스트 에디터로 위 파일의 한글 텍스트만 변경하고 저장하시면 사이트에 즉시 반영됩니다.
+## 실행
 
----
-
-## 2. 링크 및 버튼 연결 수정
-
-버튼 클릭 시 이동할 URL이나 기능 경로는 아래 파일에서 관리합니다:
-
-📁 **`src/constants/links.ts`**
-
-이 파일에는 TestWell 공식 서비스에서 직접 확인한 검사 목록, 내검사, 결과보기, 문제은행, 검사지 만들기, 출판 신청, 그룹관리 경로가 모여 있습니다. 경로가 실제 서비스에서 변경된 경우에만 함께 수정하세요.
-
-현재 기능과 향후 지향점을 구분한 문구 근거는 `docs/testwell-landing-rationale.md`, 시각 토큰과 컴포넌트 규칙은 `DESIGN.md`에서 확인할 수 있습니다.
-
----
-
-## 3. 로컬에서 실행하고 확인하는 방법
-
-### 필요 환경
-- [Node.js](https://nodejs.org/) (v18 이상 설치)
-
-### 실행 명령어 (터미널)
-```bash
-# 1. 패키지 설치 (최초 1회)
+```powershell
 npm ci
-
-# 2. 로컬 개발 서버 실행
-npm run dev
+npm run dev -- --host 127.0.0.1 --port 5175 --strictPort
+npm run build
+npm run doctor
 ```
-실행 후 브라우저에서 **`http://localhost:5173`** 에 접속하시면 수정된 화면을 실시간으로 확인하실 수 있습니다.
 
----
+화면은 http://127.0.0.1:5175/ 에서 확인한다. 같은 컴퓨터에서 기존 5173 개발서버가 열려 있어도 새 작업 폴더는 5175로 구분된다.
 
-## 4. 웹 배포 (Vercel 무료 배포)
-교수님 또는 팀원들이 설치 없이 스마트폰이나 PC 웹 링크로 바로 접속하게 하려면:
-1. GitHub 레포지토리에 프로젝트 업로드
-2. [Vercel](https://vercel.com/) 접속 후 `Import Project` 클릭
-3. 별도 설정 없이 `Deploy` 버튼만 누르면 30초 내에 전용 URL(예: `https://testwell-redesign.vercel.app`)이 생성됩니다.
+## 브라우저 검사
+
+scripts/check-browser.cjs는 Playwright와 Chrome이 있는 환경에서 실행한다. 이 작업에서는 Codex 번들의 Playwright를 NODE_PATH로 지정해 사용했다. 프로젝트 런타임 의존성은 추가하지 않았다.
+
+```powershell
+node scripts/check-browser.cjs
+```
+
+기본 주소5175, 결과 artifacts/after-checks.json, 캡처 artifacts/screenshots. capture-before.cjs는 변경 전 전용이므로 V3에서 다시 실행하면 기준 캡처를 덮어쓴다. 기존 캡처는 보존한다.
+
+## 확인 범위
+
+링크의 로그인 리디렉션은 기능 수행 검증이 아니다. 검사 데이터를 저장·배포·구매하는 테스트와 실제 이용자 테스트는 별도로 수행해야 한다. 이 작업은 로컬 브랜치 커밋까지이며 main 병합·배포는 포함하지 않는다.

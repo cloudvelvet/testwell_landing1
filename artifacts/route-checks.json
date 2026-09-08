@@ -1,0 +1,23 @@
+[
+  {
+    "label": "문항 관리에서 시작",
+    "viewport": "1280",
+    "clicks": 1,
+    "finalUrl": "https://testwell.kr/authority/login?next=/q_bank/question",
+    "loginSubmitted": false
+  },
+  {
+    "label": "내 검사 확인",
+    "viewport": "390",
+    "clicks": 1,
+    "finalUrl": "https://testwell.kr/authority/login?next=/survey/inventory",
+    "loginSubmitted": false
+  },
+  {
+    "label": "결과 확인",
+    "viewport": "390",
+    "clicks": 2,
+    "finalUrl": "https://testwell.kr/authority/login?next=/survey/my_status",
+    "loginSubmitted": false
+  }
+]

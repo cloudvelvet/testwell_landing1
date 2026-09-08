@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-08",
+  "baseline": "4e326908b8e596cbc147e6c8d9dfa77ab746e81e",
+  "branch": "codex/landing-v3-reference-led",
+  "npm_ci": "성공; 기존취약점 중간1 높음1",
+  "build": "성공",
+  "typescript": "오류없음",
+  "doctor": {
+    "before": 88,
+    "after": 100,
+    "afterIssues": 0
+  },
+  "browser": "after-checks.json",
+  "routes": "route-checks.json",
+  "links": "link-audit.json",
+  "notVerified": [
+    "인증 후 업무 수행",
+    "개별 검사 품질",
+    "실제 신규방문자 이해도",
+    "배포 및 전환율",
+    "전체 WCAG 적합성"
+  ],
+  "screenshots": 18
+}

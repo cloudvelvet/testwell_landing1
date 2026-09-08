@@ -1,0 +1,670 @@
+{
+  "checked_at": "2026-09-08T02:16:05.753937+00:00",
+  "method": "Python urllib HTTPS GET, anonymous, redirects recorded; no authenticated actions",
+  "results": [
+    {
+      "requested_url": "https://testwell.kr/",
+      "status": 200,
+      "final_url": "https://testwell.kr/",
+      "redirects": [],
+      "title": [
+        "welcome test well"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/a/theme.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "javascript: ;",
+        "/",
+        "/survey/respondent_contact_group",
+        "/q_bank/question",
+        "/q_bank/question",
+        "/q_bank/paper",
+        "/q_bank/paper",
+        "/q_bank/publish_application",
+        "/shop/manage_goods",
+        "/shop/sale-goods",
+        "/shop/sale-goods",
+        "/shop/cart",
+        "/shop/cart",
+        "/authority/login?next=/",
+        "/",
+        "/survey/respondent_contact_group",
+        "/q_bank/question",
+        "/q_bank/question",
+        "/q_bank/paper",
+        "/q_bank/paper",
+        "/q_bank/publish_application",
+        "/shop/manage_goods",
+        "/shop/sale-goods",
+        "/shop/sale-goods",
+        "/shop/cart",
+        "/shop/cart",
+        "/authority/login?next=/",
+        "javascript: ;",
+        "javascript: ;",
+        "/survey/inventory",
+        "/survey/my_status",
+        "",
+        "/survey/inventory",
+        "/shop/sale-goods/4",
+        "/shop/sale-goods/5",
+        "/shop/sale-goods/6",
+        "/shop/sale-goods/16",
+        "/shop/sale-goods/17",
+        "/shop/sale-goods/18",
+        "/about",
+        "/terms",
+        "/privacy",
+        "/notice",
+        "/customer_inquiry",
+        "/faq",
+        "/survey/agency_applyment_process",
+        "/"
+      ],
+      "visible_text": "welcome test well &times; TestWell 그룹관리 문제은행 질문관리 검사지 만들기 출판 내상품 상점 상점 카트 로그인 TestWell 그룹관리 문제은행 질문관리 검사지 만들기 출판 내상품 상점 상점 카트 로그인 TestWell TESTWELL은 근거 기반의 진단검사 및 평가 플랫폼을 제공합니다. 심리검사 심리검사 학습검사 검색 내검사 바로 가기 결과보기 바로 가기 결과보기 검사하기 110 원 단순우울검사 구매 220 원 왕 기초수학 구매 110 원 낮반 퀴즈 구매 11 원 사회도덕성 검사 구매 11 원 사칙 구매 11 원 dd 구매 테스트웰 소개 이용약관 개인정보처리방침 공지사항 1:1문의 자주찾는질문 TestWell 회사 주식회사 테스트웰 주소 경기도 용인시 기흥구 기흥로116번길 60 대표번호 --- 사업자등록증 541-88-02642 대표자 신승희 COPYRIGHT 2026 TESTWELL. ALL RIGHTS RESERVED. 검사하기 응시권 코드를 넣고 검사하기 버튼을 눌러주세요. 검사하기 결과보기 응시권 코드를 넣고 결과보기 버튼을 눌러주세요. 결과보기"
+    },
+    {
+      "requested_url": "https://testwell.kr/authority/login?next=/",
+      "status": 200,
+      "final_url": "https://testwell.kr/authority/login?next=/",
+      "redirects": [],
+      "title": [
+        "로그인 페이지"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/authority/authority.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "/",
+        "/authority/reset-password",
+        "/authority/login-request-google",
+        "/authority/login-request-naver",
+        "/authority/login-request-kakao",
+        "/authority/join"
+      ],
+      "visible_text": "로그인 페이지 TestWell Welcome back! 아이디와 패스워드를 입력해 주세요. 사용자 이름: 비밀번호: 비밀번호분실/찾기 아이디저장 로그인 OR 구글 네이버 카카오 설문지를 만들어 배포해 보세요. 간단한 설문지를 만들고, 그룹에 등록된 사람들에게 한 번에 설문조사를 완료할 수 있습니다. 아이들 학습지를 만들어 보세요 테스트웰의 학습용 문제 만들기 기능을 이용해 점수를 메기고 결과를 바로 보여 주세요. 아이들이 좋아할 거에요 퀴즈를 내어보세요 테스트웰은 모든 문제를 만들어 배포할 수 있는 시스템 입니다. 문제를 만들어 간단히 배포해 보세요. 아직 회원이 아니신가요? 회원가입"
+    },
+    {
+      "requested_url": "https://testwell.kr/survey/inventory",
+      "status": 200,
+      "final_url": "https://testwell.kr/authority/login?next=/survey/inventory",
+      "redirects": [
+        {
+          "status": 302,
+          "from": "https://testwell.kr/survey/inventory",
+          "location": "/authority/login?next=/survey/inventory",
+          "to": "https://testwell.kr/authority/login?next=/survey/inventory"
+        }
+      ],
+      "title": [
+        "로그인 페이지"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/authority/authority.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "/",
+        "/authority/reset-password",
+        "/authority/login-request-google",
+        "/authority/login-request-naver",
+        "/authority/login-request-kakao",
+        "/authority/join"
+      ],
+      "visible_text": "로그인 페이지 TestWell Welcome back! 아이디와 패스워드를 입력해 주세요. 사용자 이름: 비밀번호: 비밀번호분실/찾기 아이디저장 로그인 OR 구글 네이버 카카오 설문지를 만들어 배포해 보세요. 간단한 설문지를 만들고, 그룹에 등록된 사람들에게 한 번에 설문조사를 완료할 수 있습니다. 아이들 학습지를 만들어 보세요 테스트웰의 학습용 문제 만들기 기능을 이용해 점수를 메기고 결과를 바로 보여 주세요. 아이들이 좋아할 거에요 퀴즈를 내어보세요 테스트웰은 모든 문제를 만들어 배포할 수 있는 시스템 입니다. 문제를 만들어 간단히 배포해 보세요. 아직 회원이 아니신가요? 회원가입"
+    },
+    {
+      "requested_url": "https://testwell.kr/survey/my_status",
+      "status": 200,
+      "final_url": "https://testwell.kr/authority/login?next=/survey/my_status",
+      "redirects": [
+        {
+          "status": 302,
+          "from": "https://testwell.kr/survey/my_status",
+          "location": "/authority/login?next=/survey/my_status",
+          "to": "https://testwell.kr/authority/login?next=/survey/my_status"
+        }
+      ],
+      "title": [
+        "로그인 페이지"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/authority/authority.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "/",
+        "/authority/reset-password",
+        "/authority/login-request-google",
+        "/authority/login-request-naver",
+        "/authority/login-request-kakao",
+        "/authority/join"
+      ],
+      "visible_text": "로그인 페이지 TestWell Welcome back! 아이디와 패스워드를 입력해 주세요. 사용자 이름: 비밀번호: 비밀번호분실/찾기 아이디저장 로그인 OR 구글 네이버 카카오 설문지를 만들어 배포해 보세요. 간단한 설문지를 만들고, 그룹에 등록된 사람들에게 한 번에 설문조사를 완료할 수 있습니다. 아이들 학습지를 만들어 보세요 테스트웰의 학습용 문제 만들기 기능을 이용해 점수를 메기고 결과를 바로 보여 주세요. 아이들이 좋아할 거에요 퀴즈를 내어보세요 테스트웰은 모든 문제를 만들어 배포할 수 있는 시스템 입니다. 문제를 만들어 간단히 배포해 보세요. 아직 회원이 아니신가요? 회원가입"
+    },
+    {
+      "requested_url": "https://testwell.kr/q_bank/question",
+      "status": 200,
+      "final_url": "https://testwell.kr/authority/login?next=/q_bank/question",
+      "redirects": [
+        {
+          "status": 302,
+          "from": "https://testwell.kr/q_bank/question",
+          "location": "/authority/login?next=/q_bank/question",
+          "to": "https://testwell.kr/authority/login?next=/q_bank/question"
+        }
+      ],
+      "title": [
+        "로그인 페이지"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/authority/authority.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "/",
+        "/authority/reset-password",
+        "/authority/login-request-google",
+        "/authority/login-request-naver",
+        "/authority/login-request-kakao",
+        "/authority/join"
+      ],
+      "visible_text": "로그인 페이지 TestWell Welcome back! 아이디와 패스워드를 입력해 주세요. 사용자 이름: 비밀번호: 비밀번호분실/찾기 아이디저장 로그인 OR 구글 네이버 카카오 설문지를 만들어 배포해 보세요. 간단한 설문지를 만들고, 그룹에 등록된 사람들에게 한 번에 설문조사를 완료할 수 있습니다. 아이들 학습지를 만들어 보세요 테스트웰의 학습용 문제 만들기 기능을 이용해 점수를 메기고 결과를 바로 보여 주세요. 아이들이 좋아할 거에요 퀴즈를 내어보세요 테스트웰은 모든 문제를 만들어 배포할 수 있는 시스템 입니다. 문제를 만들어 간단히 배포해 보세요. 아직 회원이 아니신가요? 회원가입"
+    },
+    {
+      "requested_url": "https://testwell.kr/q_bank/paper",
+      "status": 200,
+      "final_url": "https://testwell.kr/authority/login?next=/q_bank/paper",
+      "redirects": [
+        {
+          "status": 302,
+          "from": "https://testwell.kr/q_bank/paper",
+          "location": "/authority/login?next=/q_bank/paper",
+          "to": "https://testwell.kr/authority/login?next=/q_bank/paper"
+        }
+      ],
+      "title": [
+        "로그인 페이지"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/authority/authority.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "/",
+        "/authority/reset-password",
+        "/authority/login-request-google",
+        "/authority/login-request-naver",
+        "/authority/login-request-kakao",
+        "/authority/join"
+      ],
+      "visible_text": "로그인 페이지 TestWell Welcome back! 아이디와 패스워드를 입력해 주세요. 사용자 이름: 비밀번호: 비밀번호분실/찾기 아이디저장 로그인 OR 구글 네이버 카카오 설문지를 만들어 배포해 보세요. 간단한 설문지를 만들고, 그룹에 등록된 사람들에게 한 번에 설문조사를 완료할 수 있습니다. 아이들 학습지를 만들어 보세요 테스트웰의 학습용 문제 만들기 기능을 이용해 점수를 메기고 결과를 바로 보여 주세요. 아이들이 좋아할 거에요 퀴즈를 내어보세요 테스트웰은 모든 문제를 만들어 배포할 수 있는 시스템 입니다. 문제를 만들어 간단히 배포해 보세요. 아직 회원이 아니신가요? 회원가입"
+    },
+    {
+      "requested_url": "https://testwell.kr/q_bank/publish_application",
+      "status": 200,
+      "final_url": "https://testwell.kr/authority/login?next=/q_bank/publish_application",
+      "redirects": [
+        {
+          "status": 302,
+          "from": "https://testwell.kr/q_bank/publish_application",
+          "location": "/authority/login?next=/q_bank/publish_application",
+          "to": "https://testwell.kr/authority/login?next=/q_bank/publish_application"
+        }
+      ],
+      "title": [
+        "로그인 페이지"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/authority/authority.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "/",
+        "/authority/reset-password",
+        "/authority/login-request-google",
+        "/authority/login-request-naver",
+        "/authority/login-request-kakao",
+        "/authority/join"
+      ],
+      "visible_text": "로그인 페이지 TestWell Welcome back! 아이디와 패스워드를 입력해 주세요. 사용자 이름: 비밀번호: 비밀번호분실/찾기 아이디저장 로그인 OR 구글 네이버 카카오 설문지를 만들어 배포해 보세요. 간단한 설문지를 만들고, 그룹에 등록된 사람들에게 한 번에 설문조사를 완료할 수 있습니다. 아이들 학습지를 만들어 보세요 테스트웰의 학습용 문제 만들기 기능을 이용해 점수를 메기고 결과를 바로 보여 주세요. 아이들이 좋아할 거에요 퀴즈를 내어보세요 테스트웰은 모든 문제를 만들어 배포할 수 있는 시스템 입니다. 문제를 만들어 간단히 배포해 보세요. 아직 회원이 아니신가요? 회원가입"
+    },
+    {
+      "requested_url": "https://testwell.kr/survey/respondent_contact_group",
+      "status": 200,
+      "final_url": "https://testwell.kr/authority/login?next=/survey/respondent_contact_group",
+      "redirects": [
+        {
+          "status": 302,
+          "from": "https://testwell.kr/survey/respondent_contact_group",
+          "location": "/authority/login?next=/survey/respondent_contact_group",
+          "to": "https://testwell.kr/authority/login?next=/survey/respondent_contact_group"
+        }
+      ],
+      "title": [
+        "로그인 페이지"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/authority/authority.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "/",
+        "/authority/reset-password",
+        "/authority/login-request-google",
+        "/authority/login-request-naver",
+        "/authority/login-request-kakao",
+        "/authority/join"
+      ],
+      "visible_text": "로그인 페이지 TestWell Welcome back! 아이디와 패스워드를 입력해 주세요. 사용자 이름: 비밀번호: 비밀번호분실/찾기 아이디저장 로그인 OR 구글 네이버 카카오 설문지를 만들어 배포해 보세요. 간단한 설문지를 만들고, 그룹에 등록된 사람들에게 한 번에 설문조사를 완료할 수 있습니다. 아이들 학습지를 만들어 보세요 테스트웰의 학습용 문제 만들기 기능을 이용해 점수를 메기고 결과를 바로 보여 주세요. 아이들이 좋아할 거에요 퀴즈를 내어보세요 테스트웰은 모든 문제를 만들어 배포할 수 있는 시스템 입니다. 문제를 만들어 간단히 배포해 보세요. 아직 회원이 아니신가요? 회원가입"
+    },
+    {
+      "requested_url": "https://testwell.kr/about",
+      "status": 200,
+      "final_url": "https://testwell.kr/about",
+      "redirects": [],
+      "title": [
+        "소개"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/a/theme.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "javascript: ;",
+        "/",
+        "/survey/respondent_contact_group",
+        "/q_bank/question",
+        "/q_bank/question",
+        "/q_bank/paper",
+        "/q_bank/paper",
+        "/q_bank/publish_application",
+        "/shop/manage_goods",
+        "/shop/sale-goods",
+        "/shop/sale-goods",
+        "/shop/cart",
+        "/shop/cart",
+        "/authority/login?next=/",
+        "/",
+        "/survey/respondent_contact_group",
+        "/q_bank/question",
+        "/q_bank/question",
+        "/q_bank/paper",
+        "/q_bank/paper",
+        "/q_bank/publish_application",
+        "/shop/manage_goods",
+        "/shop/sale-goods",
+        "/shop/sale-goods",
+        "/shop/cart",
+        "/shop/cart",
+        "/authority/login?next=/",
+        "/about",
+        "/terms",
+        "/privacy",
+        "/notice",
+        "/customer_inquiry",
+        "/faq",
+        "/survey/agency_applyment_process",
+        "/"
+      ],
+      "visible_text": "소개 &times; TestWell 그룹관리 문제은행 질문관리 검사지 만들기 출판 내상품 상점 상점 카트 로그인 TestWell 그룹관리 문제은행 질문관리 검사지 만들기 출판 내상품 상점 상점 카트 로그인 소개 심리검사, 학습평가 전문기업 테스트웰 소개 입니다. 테스트웰 소개 이용약관 개인정보처리방침 공지사항 1:1문의 자주찾는질문 TestWell 회사 주식회사 테스트웰 주소 경기도 용인시 기흥구 기흥로116번길 60 대표번호 --- 사업자등록증 541-88-02642 대표자 신승희 COPYRIGHT 2026 TESTWELL. ALL RIGHTS RESERVED."
+    },
+    {
+      "requested_url": "https://testwell.kr/terms",
+      "status": 200,
+      "final_url": "https://testwell.kr/terms",
+      "redirects": [],
+      "title": [
+        "약관"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/a/theme.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "javascript: ;",
+        "/",
+        "/survey/respondent_contact_group",
+        "/q_bank/question",
+        "/q_bank/question",
+        "/q_bank/paper",
+        "/q_bank/paper",
+        "/q_bank/publish_application",
+        "/shop/manage_goods",
+        "/shop/sale-goods",
+        "/shop/sale-goods",
+        "/shop/cart",
+        "/shop/cart",
+        "/authority/login?next=/",
+        "/",
+        "/survey/respondent_contact_group",
+        "/q_bank/question",
+        "/q_bank/question",
+        "/q_bank/paper",
+        "/q_bank/paper",
+        "/q_bank/publish_application",
+        "/shop/manage_goods",
+        "/shop/sale-goods",
+        "/shop/sale-goods",
+        "/shop/cart",
+        "/shop/cart",
+        "/authority/login?next=/",
+        "/about",
+        "/terms",
+        "/privacy",
+        "/notice",
+        "/customer_inquiry",
+        "/faq",
+        "/survey/agency_applyment_process",
+        "/"
+      ],
+      "visible_text": "약관 &times; TestWell 그룹관리 문제은행 질문관리 검사지 만들기 출판 내상품 상점 상점 카트 로그인 TestWell 그룹관리 문제은행 질문관리 검사지 만들기 출판 내상품 상점 상점 카트 로그인 약관 테스트웰 서비스 운영 약관입니다. 테스트웰 소개 이용약관 개인정보처리방침 공지사항 1:1문의 자주찾는질문 TestWell 회사 주식회사 테스트웰 주소 경기도 용인시 기흥구 기흥로116번길 60 대표번호 --- 사업자등록증 541-88-02642 대표자 신승희 COPYRIGHT 2026 TESTWELL. ALL RIGHTS RESERVED."
+    },
+    {
+      "requested_url": "https://testwell.kr/privacy",
+      "status": 200,
+      "final_url": "https://testwell.kr/privacy",
+      "redirects": [],
+      "title": [
+        "개인정보 처리방침"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/a/theme.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "javascript: ;",
+        "/",
+        "/survey/respondent_contact_group",
+        "/q_bank/question",
+        "/q_bank/question",
+        "/q_bank/paper",
+        "/q_bank/paper",
+        "/q_bank/publish_application",
+        "/shop/manage_goods",
+        "/shop/sale-goods",
+        "/shop/sale-goods",
+        "/shop/cart",
+        "/shop/cart",
+        "/authority/login?next=/",
+        "/",
+        "/survey/respondent_contact_group",
+        "/q_bank/question",
+        "/q_bank/question",
+        "/q_bank/paper",
+        "/q_bank/paper",
+        "/q_bank/publish_application",
+        "/shop/manage_goods",
+        "/shop/sale-goods",
+        "/shop/sale-goods",
+        "/shop/cart",
+        "/shop/cart",
+        "/authority/login?next=/",
+        "/about",
+        "/terms",
+        "/privacy",
+        "/notice",
+        "/customer_inquiry",
+        "/faq",
+        "/survey/agency_applyment_process",
+        "/"
+      ],
+      "visible_text": "개인정보 처리방침 &times; TestWell 그룹관리 문제은행 질문관리 검사지 만들기 출판 내상품 상점 상점 카트 로그인 TestWell 그룹관리 문제은행 질문관리 검사지 만들기 출판 내상품 상점 상점 카트 로그인 개인정보 처리방침 테스트웰의 개인정보 처리방침 입니다. 테스트웰 소개 이용약관 개인정보처리방침 공지사항 1:1문의 자주찾는질문 TestWell 회사 주식회사 테스트웰 주소 경기도 용인시 기흥구 기흥로116번길 60 대표번호 --- 사업자등록증 541-88-02642 대표자 신승희 COPYRIGHT 2026 TESTWELL. ALL RIGHTS RESERVED."
+    },
+    {
+      "requested_url": "https://testwell.kr/customer_inquiry",
+      "status": 200,
+      "final_url": "https://testwell.kr/authority/login?next=/customer_inquiry",
+      "redirects": [
+        {
+          "status": 302,
+          "from": "https://testwell.kr/customer_inquiry",
+          "location": "/authority/login?next=/customer_inquiry",
+          "to": "https://testwell.kr/authority/login?next=/customer_inquiry"
+        }
+      ],
+      "title": [
+        "로그인 페이지"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/authority/authority.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "/",
+        "/authority/reset-password",
+        "/authority/login-request-google",
+        "/authority/login-request-naver",
+        "/authority/login-request-kakao",
+        "/authority/join"
+      ],
+      "visible_text": "로그인 페이지 TestWell Welcome back! 아이디와 패스워드를 입력해 주세요. 사용자 이름: 비밀번호: 비밀번호분실/찾기 아이디저장 로그인 OR 구글 네이버 카카오 설문지를 만들어 배포해 보세요. 간단한 설문지를 만들고, 그룹에 등록된 사람들에게 한 번에 설문조사를 완료할 수 있습니다. 아이들 학습지를 만들어 보세요 테스트웰의 학습용 문제 만들기 기능을 이용해 점수를 메기고 결과를 바로 보여 주세요. 아이들이 좋아할 거에요 퀴즈를 내어보세요 테스트웰은 모든 문제를 만들어 배포할 수 있는 시스템 입니다. 문제를 만들어 간단히 배포해 보세요. 아직 회원이 아니신가요? 회원가입"
+    },
+    {
+      "requested_url": "https://testwell.kr/authority/join",
+      "status": 200,
+      "final_url": "https://testwell.kr/authority/join",
+      "redirects": [],
+      "title": [
+        "회원가입 페이지"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/authority/authority.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "/",
+        "/authority/login-request-google",
+        "/authority/login-request-naver",
+        "/authority/login-request-kakao",
+        "/authority/login"
+      ],
+      "visible_text": "회원가입 페이지 TestWell 회원가입 아래양식을 기입하고 회원가입을 하면, Testwell의 모든 서비스를 누릴 수 있습니다. 사용자 이름: 150자 이하 문자, 숫자 그리고 @/./+/-/_만 가능합니다. 비밀번호: 다른 개인 정보와 유사한 비밀번호는 사용할 수 없습니다. 비밀번호는 최소 8자 이상이어야 합니다. 통상적으로 자주 사용되는 비밀번호는 사용할 수 없습니다. 숫자로만 이루어진 비밀번호는 사용할 수 없습니다. 비밀번호 확인: 확인을 위해 이전과 동일한 비밀번호를 입력하세요. 이메일: 회원가입 OR 구글 네이버 카카오 설문지를 만들어 배포해 보세요. 간단한 설문지를 만들고, 그룹에 등록된 사람들에게 한 번에 설문조사를 완료할 수 있습니다. 아이들 학습지를 만들어 보세요 테스트웰의 학습용 문제 만들기 기능을 이용해 점수를 메기고 결과를 바로 보여 주세요. 아이들이 좋아할 거에요 퀴즈를 내어보세요 테스트웰은 모든 문제를 만들어 배포할 수 있는 시스템 입니다. 문제를 만들어 간단히 배포해 보세요. 이미 TESTWELL에 가입하셨나요? 로그인"
+    },
+    {
+      "requested_url": "https://testwell.kr/shop/sale-goods",
+      "status": 200,
+      "final_url": "https://testwell.kr/authority/login?next=/shop/sale-goods",
+      "redirects": [
+        {
+          "status": 302,
+          "from": "https://testwell.kr/shop/sale-goods",
+          "location": "/authority/login?next=/shop/sale-goods",
+          "to": "https://testwell.kr/authority/login?next=/shop/sale-goods"
+        }
+      ],
+      "title": [
+        "로그인 페이지"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/authority/authority.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "/",
+        "/authority/reset-password",
+        "/authority/login-request-google",
+        "/authority/login-request-naver",
+        "/authority/login-request-kakao",
+        "/authority/join"
+      ],
+      "visible_text": "로그인 페이지 TestWell Welcome back! 아이디와 패스워드를 입력해 주세요. 사용자 이름: 비밀번호: 비밀번호분실/찾기 아이디저장 로그인 OR 구글 네이버 카카오 설문지를 만들어 배포해 보세요. 간단한 설문지를 만들고, 그룹에 등록된 사람들에게 한 번에 설문조사를 완료할 수 있습니다. 아이들 학습지를 만들어 보세요 테스트웰의 학습용 문제 만들기 기능을 이용해 점수를 메기고 결과를 바로 보여 주세요. 아이들이 좋아할 거에요 퀴즈를 내어보세요 테스트웰은 모든 문제를 만들어 배포할 수 있는 시스템 입니다. 문제를 만들어 간단히 배포해 보세요. 아직 회원이 아니신가요? 회원가입"
+    },
+    {
+      "requested_url": "https://testwell.kr/shop/manage_goods",
+      "status": 200,
+      "final_url": "https://testwell.kr/authority/login?next=/shop/manage_goods",
+      "redirects": [
+        {
+          "status": 302,
+          "from": "https://testwell.kr/shop/manage_goods",
+          "location": "/authority/login?next=/shop/manage_goods",
+          "to": "https://testwell.kr/authority/login?next=/shop/manage_goods"
+        }
+      ],
+      "title": [
+        "로그인 페이지"
+      ],
+      "links": [
+        "/static/www/fontawesome-free-6.4.2-web/css/all.css",
+        "/static/www/bootstrap-5.3.1-dist/css/bootstrap.min.css",
+        "/static/a/mystrap.css",
+        "/static/www/tw.css",
+        "/static/authority/authority.css",
+        "/static/a/custom_widget.css",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&display=swap",
+        "/",
+        "/authority/reset-password",
+        "/authority/login-request-google",
+        "/authority/login-request-naver",
+        "/authority/login-request-kakao",
+        "/authority/join"
+      ],
+      "visible_text": "로그인 페이지 TestWell Welcome back! 아이디와 패스워드를 입력해 주세요. 사용자 이름: 비밀번호: 비밀번호분실/찾기 아이디저장 로그인 OR 구글 네이버 카카오 설문지를 만들어 배포해 보세요. 간단한 설문지를 만들고, 그룹에 등록된 사람들에게 한 번에 설문조사를 완료할 수 있습니다. 아이들 학습지를 만들어 보세요 테스트웰의 학습용 문제 만들기 기능을 이용해 점수를 메기고 결과를 바로 보여 주세요. 아이들이 좋아할 거에요 퀴즈를 내어보세요 테스트웰은 모든 문제를 만들어 배포할 수 있는 시스템 입니다. 문제를 만들어 간단히 배포해 보세요. 아직 회원이 아니신가요? 회원가입"
+    },
+    {
+      "requested_url": "https://aha-lab.ajou.ac.kr/",
+      "status": 200,
+      "final_url": "https://aha-lab.ajou.ac.kr/",
+      "redirects": [],
+      "title": [
+        "AHA Lab"
+      ],
+      "links": [
+        "https://www.gstatic.com/images/branding/productlogos/sites_2026/v3/ico/sites_2026_16dp.ico",
+        "https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:300,400,500,700|Source+Code+Pro:400,700&display=swap",
+        "https://www.gstatic.com/_/atari/_/ss/k=atari.vw.mAB8W_Cz9F4.L.X.O/am=IAACDAAE/d=1/rs=AGEqA5lHaSDH7KnhfOvRNs9DVAzs2an7kg",
+        "/home",
+        "/home",
+        "/home",
+        "/main-research-of-p-i",
+        "/people/lab-director",
+        "/people/members",
+        "/people/alumni",
+        "/research/research-topics",
+        "/research/research-projects",
+        "/research/publications",
+        "/lab-news",
+        "/notice",
+        "/contact",
+        "/home",
+        "/home",
+        "/main-research-of-p-i",
+        "/people/lab-director",
+        "/people/members",
+        "/people/alumni",
+        "/research/research-topics",
+        "/research/research-projects",
+        "/research/publications",
+        "/lab-news",
+        "/notice",
+        "/contact",
+        "/home",
+        "/main-research-of-p-i",
+        "/people/lab-director",
+        "/people/members",
+        "/people/alumni",
+        "/research/research-topics",
+        "/research/research-projects",
+        "/research/publications",
+        "/lab-news",
+        "/notice",
+        "/contact",
+        "#h.nfalgeh2o3hd",
+        "#h.syvn4h4spvyu",
+        "#h.f6bqe8a72ijb",
+        "#h.yxculqs72lhs",
+        "#h.6iuh6z848wdp"
+      ],
+      "visible_text": "AHA Lab Search this site Embedded Files Skip to main content Skip to navigation AHA Lab Home Main Research of P.I. People Lab Director Members Alumni Research Research Topics Research Projects Publications Lab News Notice Contact AHA Lab Home Main Research of P.I. People Lab Director Members Alumni Research Research Topics Research Projects Publications Lab News Notice Contact More Home Main Research of P.I. People Lab Director Members Alumni Research Research Topics Research Projects Publications Lab News Notice Contact A ssessments, H uman, A nalytics Psychological Measurement Assessment (1) 심리 측정 검사 Human Decision Making Process Modeling (2) 인간 의사결정 과정 모델링 Risk Prediction Modeling (3) 위험 예측 모형 계량심리학(Psychometrics) 은 인간 중심 측정 및 검사 개발(psychological measurement &amp; assessment development), 인간의 사고 및 심리에 대한 수리적 모델링(mathematical modeling), 연구 설계(research design), 데이터 분석(analysis of psychological data) 등을 연구합니다. 아주대학교 심리측정 및 데이터분석 전공 AHA L ab 에서는 (1) 근거기반의 인간 중심 평가 및 검사 도구 시스템 개발과 표준화, (2) 인간 의사결정 과정 모델링 , (3) 위험예측평가모형 및 사회지표개발 , (4) 인간행동분석 을 위한 통계분석 방법 을 연구합니다. 추가적으로 디지털심리측정 , 상황기반 검사도구 , 문화에 따른 측정동일성 , CAT (Computerized Adaptive Testing) , 마지막으로 삶의 질 을 위한 심리학 연구를 진행하고 있습니다. Report abuse Page details Page updated Report abuse"
+    }
+  ],
+  "text_extraction_note": "HTML comments, scripts, styles and tags removed; DOM/CSS visibility not evaluated.",
+  "standards_reference": {
+    "url": "https://www.testingstandards.net/uploads/7/6/6/4/76643089/standards_2014edition.pdf",
+    "verified_by": "web open PDF full text",
+    "publication_year": 2014,
+    "printed_page": 23,
+    "standards": [
+      "1.0",
+      "1.1",
+      "1.2",
+      "1.3"
+    ]
+  }
+}

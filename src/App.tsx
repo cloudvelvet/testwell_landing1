@@ -1,28 +1,24 @@
-import React from 'react';
+import { MotionConfig } from 'framer-motion';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { WhatIsTestWell } from '@/components/WhatIsTestWell';
+import { MeasurementContext } from '@/components/MeasurementContext';
 import { FinalCTA } from '@/components/FinalCTA';
 import { Footer } from '@/components/Footer';
+import { SITE_CONTENT } from '@/constants/content';
 
-export const App: React.FC = () => {
+export default function App() {
   return (
-    <div className="min-h-screen bg-brand-black text-white selection:bg-brand-yellow selection:text-brand-black flex flex-col font-sans">
-      <a
-        href="#main-content"
-        className="fixed left-4 top-4 z-[60] -translate-y-24 rounded-md bg-brand-yellow px-4 py-3 font-bold text-brand-black transition-transform focus:translate-y-0"
-      >
-        본문으로 건너뛰기
-      </a>
+    <MotionConfig reducedMotion="user">
+      <a href="#main-content" className="skip-link">{SITE_CONTENT.shared.skip}</a>
       <Header />
-      <main id="main-content" className="flex-grow">
+      <main id="main-content" tabIndex={-1}>
         <Hero />
         <WhatIsTestWell />
+        <MeasurementContext />
         <FinalCTA />
       </main>
       <Footer />
-    </div>
+    </MotionConfig>
   );
-};
-
-export default App;
+}

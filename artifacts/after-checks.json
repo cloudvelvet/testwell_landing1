@@ -1,0 +1,595 @@
+{
+  "date": "2026-09-08",
+  "results": [
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "heroHeight": 573.421875,
+      "headings": [
+        {
+          "level": 1,
+          "text": "검사를 만드는 일부터,\n참여와 결과 확인까지."
+        },
+        {
+          "level": 2,
+          "text": "참여할 검사가 있나요?"
+        },
+        {
+          "level": 2,
+          "text": "질문을 준비하고,\n검사로 구성합니다."
+        },
+        {
+          "level": 3,
+          "text": "질문과 문제를 준비합니다."
+        },
+        {
+          "level": 3,
+          "text": "문항을 하나의 검사로 모읍니다."
+        },
+        {
+          "level": 3,
+          "text": "참여할 사람들을 관리합니다."
+        },
+        {
+          "level": 2,
+          "text": "점수에는 해석의 기준이 필요합니다."
+        },
+        {
+          "level": 2,
+          "text": "목적에 맞는 곳으로 이어집니다."
+        }
+      ],
+      "brokenAnchors": [],
+      "smallText": [],
+      "inaccessibleSvg": 0,
+      "imagesWithoutAlt": 0,
+      "links": [
+        {
+          "label": "본문으로 건너뛰기",
+          "href": "#main-content"
+        },
+        {
+          "label": "TestWell.",
+          "href": "#top"
+        },
+        {
+          "label": "이용 안내",
+          "href": "#about"
+        },
+        {
+          "label": "내 검사",
+          "href": "https://testwell.kr/survey/inventory"
+        },
+        {
+          "label": "결과 확인",
+          "href": "https://testwell.kr/survey/my_status"
+        },
+        {
+          "label": "로그인",
+          "href": "https://testwell.kr/authority/login?next=/"
+        },
+        {
+          "label": "이용 안내",
+          "href": "#about"
+        },
+        {
+          "label": "내 검사",
+          "href": "https://testwell.kr/survey/inventory"
+        },
+        {
+          "label": "결과 확인",
+          "href": "https://testwell.kr/survey/my_status"
+        },
+        {
+          "label": "로그인",
+          "href": "https://testwell.kr/authority/login?next=/"
+        },
+        {
+          "label": "문항 관리에서 시작",
+          "href": "https://testwell.kr/q_bank/question"
+        },
+        {
+          "label": "내 검사 확인",
+          "href": "https://testwell.kr/survey/inventory"
+        },
+        {
+          "label": "질문 관리 열기",
+          "href": "https://testwell.kr/q_bank/question"
+        },
+        {
+          "label": "검사지 만들기",
+          "href": "https://testwell.kr/q_bank/paper"
+        },
+        {
+          "label": "그룹 관리 열기",
+          "href": "https://testwell.kr/survey/respondent_contact_group"
+        },
+        {
+          "label": "검사를 찾고 싶다면공식 서비스에서 둘러보기",
+          "href": "https://testwell.kr/"
+        },
+        {
+          "label": "이용 방법이 궁금하다면TestWell에 문의하기",
+          "href": "https://testwell.kr/customer_inquiry"
+        },
+        {
+          "label": "TestWell.",
+          "href": "#top"
+        },
+        {
+          "label": "공식 소개",
+          "href": "https://testwell.kr/about"
+        },
+        {
+          "label": "이용약관",
+          "href": "https://testwell.kr/terms"
+        },
+        {
+          "label": "개인정보처리방침",
+          "href": "https://testwell.kr/privacy"
+        }
+      ],
+      "reduce": true,
+      "height": 844,
+      "errors": [],
+      "keyboard": "통과",
+      "focus": {
+        "style": "solid",
+        "width": "3px"
+      }
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "heroHeight": 497.859375,
+      "headings": [
+        {
+          "level": 1,
+          "text": "검사를 만드는 일부터,\n참여와 결과 확인까지."
+        },
+        {
+          "level": 2,
+          "text": "참여할 검사가 있나요?"
+        },
+        {
+          "level": 2,
+          "text": "질문을 준비하고,\n검사로 구성합니다."
+        },
+        {
+          "level": 3,
+          "text": "질문과 문제를 준비합니다."
+        },
+        {
+          "level": 3,
+          "text": "문항을 하나의 검사로 모읍니다."
+        },
+        {
+          "level": 3,
+          "text": "참여할 사람들을 관리합니다."
+        },
+        {
+          "level": 2,
+          "text": "점수에는 해석의 기준이 필요합니다."
+        },
+        {
+          "level": 2,
+          "text": "목적에 맞는 곳으로 이어집니다."
+        }
+      ],
+      "brokenAnchors": [],
+      "smallText": [],
+      "inaccessibleSvg": 0,
+      "imagesWithoutAlt": 0,
+      "links": [
+        {
+          "label": "본문으로 건너뛰기",
+          "href": "#main-content"
+        },
+        {
+          "label": "TestWell.",
+          "href": "#top"
+        },
+        {
+          "label": "이용 안내",
+          "href": "#about"
+        },
+        {
+          "label": "내 검사",
+          "href": "https://testwell.kr/survey/inventory"
+        },
+        {
+          "label": "결과 확인",
+          "href": "https://testwell.kr/survey/my_status"
+        },
+        {
+          "label": "로그인",
+          "href": "https://testwell.kr/authority/login?next=/"
+        },
+        {
+          "label": "이용 안내",
+          "href": "#about"
+        },
+        {
+          "label": "내 검사",
+          "href": "https://testwell.kr/survey/inventory"
+        },
+        {
+          "label": "결과 확인",
+          "href": "https://testwell.kr/survey/my_status"
+        },
+        {
+          "label": "로그인",
+          "href": "https://testwell.kr/authority/login?next=/"
+        },
+        {
+          "label": "문항 관리에서 시작",
+          "href": "https://testwell.kr/q_bank/question"
+        },
+        {
+          "label": "내 검사 확인",
+          "href": "https://testwell.kr/survey/inventory"
+        },
+        {
+          "label": "질문 관리 열기",
+          "href": "https://testwell.kr/q_bank/question"
+        },
+        {
+          "label": "검사지 만들기",
+          "href": "https://testwell.kr/q_bank/paper"
+        },
+        {
+          "label": "그룹 관리 열기",
+          "href": "https://testwell.kr/survey/respondent_contact_group"
+        },
+        {
+          "label": "검사를 찾고 싶다면공식 서비스에서 둘러보기",
+          "href": "https://testwell.kr/"
+        },
+        {
+          "label": "이용 방법이 궁금하다면TestWell에 문의하기",
+          "href": "https://testwell.kr/customer_inquiry"
+        },
+        {
+          "label": "TestWell.",
+          "href": "#top"
+        },
+        {
+          "label": "공식 소개",
+          "href": "https://testwell.kr/about"
+        },
+        {
+          "label": "이용약관",
+          "href": "https://testwell.kr/terms"
+        },
+        {
+          "label": "개인정보처리방침",
+          "href": "https://testwell.kr/privacy"
+        }
+      ],
+      "reduce": true,
+      "height": 1024,
+      "errors": [],
+      "keyboard": "통과",
+      "focus": {
+        "style": "solid",
+        "width": "3px"
+      }
+    },
+    {
+      "width": 1280,
+      "scrollWidth": 1280,
+      "heroHeight": 549.390625,
+      "headings": [
+        {
+          "level": 1,
+          "text": "검사를 만드는 일부터,\n참여와 결과 확인까지."
+        },
+        {
+          "level": 2,
+          "text": "참여할 검사가 있나요?"
+        },
+        {
+          "level": 2,
+          "text": "질문을 준비하고,\n검사로 구성합니다."
+        },
+        {
+          "level": 3,
+          "text": "질문과 문제를 준비합니다."
+        },
+        {
+          "level": 3,
+          "text": "문항을 하나의 검사로 모읍니다."
+        },
+        {
+          "level": 3,
+          "text": "참여할 사람들을 관리합니다."
+        },
+        {
+          "level": 2,
+          "text": "점수에는 해석의 기준이 필요합니다."
+        },
+        {
+          "level": 2,
+          "text": "목적에 맞는 곳으로 이어집니다."
+        }
+      ],
+      "brokenAnchors": [],
+      "smallText": [],
+      "inaccessibleSvg": 0,
+      "imagesWithoutAlt": 0,
+      "links": [
+        {
+          "label": "본문으로 건너뛰기",
+          "href": "#main-content"
+        },
+        {
+          "label": "TestWell.",
+          "href": "#top"
+        },
+        {
+          "label": "이용 안내",
+          "href": "#about"
+        },
+        {
+          "label": "내 검사",
+          "href": "https://testwell.kr/survey/inventory"
+        },
+        {
+          "label": "결과 확인",
+          "href": "https://testwell.kr/survey/my_status"
+        },
+        {
+          "label": "로그인",
+          "href": "https://testwell.kr/authority/login?next=/"
+        },
+        {
+          "label": "이용 안내",
+          "href": "#about"
+        },
+        {
+          "label": "내 검사",
+          "href": "https://testwell.kr/survey/inventory"
+        },
+        {
+          "label": "결과 확인",
+          "href": "https://testwell.kr/survey/my_status"
+        },
+        {
+          "label": "로그인",
+          "href": "https://testwell.kr/authority/login?next=/"
+        },
+        {
+          "label": "문항 관리에서 시작",
+          "href": "https://testwell.kr/q_bank/question"
+        },
+        {
+          "label": "내 검사 확인",
+          "href": "https://testwell.kr/survey/inventory"
+        },
+        {
+          "label": "질문 관리 열기",
+          "href": "https://testwell.kr/q_bank/question"
+        },
+        {
+          "label": "검사지 만들기",
+          "href": "https://testwell.kr/q_bank/paper"
+        },
+        {
+          "label": "그룹 관리 열기",
+          "href": "https://testwell.kr/survey/respondent_contact_group"
+        },
+        {
+          "label": "검사를 찾고 싶다면공식 서비스에서 둘러보기",
+          "href": "https://testwell.kr/"
+        },
+        {
+          "label": "이용 방법이 궁금하다면TestWell에 문의하기",
+          "href": "https://testwell.kr/customer_inquiry"
+        },
+        {
+          "label": "TestWell.",
+          "href": "#top"
+        },
+        {
+          "label": "공식 소개",
+          "href": "https://testwell.kr/about"
+        },
+        {
+          "label": "이용약관",
+          "href": "https://testwell.kr/terms"
+        },
+        {
+          "label": "개인정보처리방침",
+          "href": "https://testwell.kr/privacy"
+        }
+      ],
+      "reduce": true,
+      "height": 800,
+      "errors": [],
+      "keyboard": "통과",
+      "focus": {
+        "style": "solid",
+        "width": "3px"
+      }
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "heroHeight": 555.703125,
+      "headings": [
+        {
+          "level": 1,
+          "text": "검사를 만드는 일부터,\n참여와 결과 확인까지."
+        },
+        {
+          "level": 2,
+          "text": "참여할 검사가 있나요?"
+        },
+        {
+          "level": 2,
+          "text": "질문을 준비하고,\n검사로 구성합니다."
+        },
+        {
+          "level": 3,
+          "text": "질문과 문제를 준비합니다."
+        },
+        {
+          "level": 3,
+          "text": "문항을 하나의 검사로 모읍니다."
+        },
+        {
+          "level": 3,
+          "text": "참여할 사람들을 관리합니다."
+        },
+        {
+          "level": 2,
+          "text": "점수에는 해석의 기준이 필요합니다."
+        },
+        {
+          "level": 2,
+          "text": "목적에 맞는 곳으로 이어집니다."
+        }
+      ],
+      "brokenAnchors": [],
+      "smallText": [],
+      "inaccessibleSvg": 0,
+      "imagesWithoutAlt": 0,
+      "links": [
+        {
+          "label": "본문으로 건너뛰기",
+          "href": "#main-content"
+        },
+        {
+          "label": "TestWell.",
+          "href": "#top"
+        },
+        {
+          "label": "이용 안내",
+          "href": "#about"
+        },
+        {
+          "label": "내 검사",
+          "href": "https://testwell.kr/survey/inventory"
+        },
+        {
+          "label": "결과 확인",
+          "href": "https://testwell.kr/survey/my_status"
+        },
+        {
+          "label": "로그인",
+          "href": "https://testwell.kr/authority/login?next=/"
+        },
+        {
+          "label": "이용 안내",
+          "href": "#about"
+        },
+        {
+          "label": "내 검사",
+          "href": "https://testwell.kr/survey/inventory"
+        },
+        {
+          "label": "결과 확인",
+          "href": "https://testwell.kr/survey/my_status"
+        },
+        {
+          "label": "로그인",
+          "href": "https://testwell.kr/authority/login?next=/"
+        },
+        {
+          "label": "문항 관리에서 시작",
+          "href": "https://testwell.kr/q_bank/question"
+        },
+        {
+          "label": "내 검사 확인",
+          "href": "https://testwell.kr/survey/inventory"
+        },
+        {
+          "label": "질문 관리 열기",
+          "href": "https://testwell.kr/q_bank/question"
+        },
+        {
+          "label": "검사지 만들기",
+          "href": "https://testwell.kr/q_bank/paper"
+        },
+        {
+          "label": "그룹 관리 열기",
+          "href": "https://testwell.kr/survey/respondent_contact_group"
+        },
+        {
+          "label": "검사를 찾고 싶다면공식 서비스에서 둘러보기",
+          "href": "https://testwell.kr/"
+        },
+        {
+          "label": "이용 방법이 궁금하다면TestWell에 문의하기",
+          "href": "https://testwell.kr/customer_inquiry"
+        },
+        {
+          "label": "TestWell.",
+          "href": "#top"
+        },
+        {
+          "label": "공식 소개",
+          "href": "https://testwell.kr/about"
+        },
+        {
+          "label": "이용약관",
+          "href": "https://testwell.kr/terms"
+        },
+        {
+          "label": "개인정보처리방침",
+          "href": "https://testwell.kr/privacy"
+        }
+      ],
+      "reduce": true,
+      "height": 900,
+      "errors": [],
+      "keyboard": "통과",
+      "focus": {
+        "style": "solid",
+        "width": "3px"
+      }
+    }
+  ],
+  "contrast": [
+    {
+      "fg": "#ffffff",
+      "bg": "#111111",
+      "ratio": 18.88
+    },
+    {
+      "fg": "#c6c6c6",
+      "bg": "#111111",
+      "ratio": 11.05
+    },
+    {
+      "fg": "#b8b8b8",
+      "bg": "#111111",
+      "ratio": 9.52
+    },
+    {
+      "fg": "#111111",
+      "bg": "#e9b20a",
+      "ratio": 9.74
+    },
+    {
+      "fg": "#55554f",
+      "bg": "#f6f2ea",
+      "ratio": 6.72
+    },
+    {
+      "fg": "#656159",
+      "bg": "#f6f2ea",
+      "ratio": 5.52
+    },
+    {
+      "fg": "#656159",
+      "bg": "#ede7db",
+      "ratio": 5
+    },
+    {
+      "fg": "#253858",
+      "bg": "#f6f2ea",
+      "ratio": 10.53
+    }
+  ]
+}
