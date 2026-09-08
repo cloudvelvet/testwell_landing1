@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-09-08T04:17:02.554Z",
+  "checkedAt": "2026-09-08T05:01:30.220Z",
   "branch": "codex/landing-v3-reference-led",
-  "verificationBaseCommit": "24012362b71bb74869675fbbfb4d893d52679b27",
+  "verificationBaseCommit": "95959726eda749c9751fa5c6075d35584b243f19",
   "sourceHashes": {
-    "src/constants/content.ts": "c1bf4689a0874c831e8bf9b42c31c67424b3905312897b1a41bf429b674f02fa",
+    "src/constants/content.ts": "9904f56556b472eabf3733022f04395c07b4499ec9cf7b2915e2bd6476cf474a",
     "src/constants/links.ts": "696cb74e62fa257df98ebb5ab8bfed8cb98e357d795d900517e162ed794d9653",
     "src/index.css": "9f725baf5a4ae1fb7e4cbdded445445f3df6c7cd8f942cee8e0eb499463e43a0",
     "src/App.tsx": "924ace5cecb5abbec8e178a8707a1d462f78d8e0a828ecd41141aa3c77d1cb40",
@@ -16,8 +16,8 @@
     "primaryHref": "https://testwell.kr/q_bank/question",
     "creationNote": "로그인 후 질문 관리에서 시작하세요.",
     "figureCaption": "문항을 모아 검사지를 구성하고, 참여할 사람은 그룹으로 관리할 수 있습니다. 필요한 작업부터 시작하세요.",
-    "measurementTitle": "이 검사로 무엇을 알고 싶나요?",
-    "measurementDescription": "태도나 경험을 묻는 문항과 지식이나 수행을 확인하는 문제는 측정하려는 내용과 결과 해석 방식이 다릅니다. 먼저 무엇을 알아보려는지 정하고, 목적에 맞는 문항과 해석 기준을 준비하세요.",
+    "measurementTitle": "검사의 목적에 맞게 문항을 구성하세요",
+    "measurementDescription": "확인하려는 내용에 따라 필요한 문항이 달라집니다. 검사 목적을 먼저 정하고, 그 목적에 맞는 질문과 문제를 준비해 보세요.",
     "browseLabel": "공식 서비스에서 둘러보기",
     "browseHref": "https://testwell.kr/"
   },
@@ -63,7 +63,7 @@
   "browser": {
     "status": "통과",
     "artifact": "artifacts/after-checks.json",
-    "sha256": "9d178aa3b09176f4f4285dc3cc5d743ccb8eb7291018ce7a45af5d49c3b3f242",
+    "sha256": "bb6ab9bc71ff2c20a138eabc688044a1406ede09fe4518af780705f4247e2309",
     "viewports": [
       {
         "width": 390,
@@ -86,7 +86,7 @@
   "routes": {
     "status": "통과",
     "artifact": "artifacts/route-checks.json",
-    "sha256": "c9ae661cbb1a6584a201065665f3595ab9b8382220ee353a99d0c5ad2b8feb9f",
+    "sha256": "1c5465354a5d2748fdf7164ffb7b702f30f58d0dfbf2b31836a47fb23262b14b",
     "count": 3,
     "scope": "인증 제출 없이 로그인 게이트와 next 보존까지"
   },
@@ -103,7 +103,7 @@
     "screenshots": [
       {
         "file": "artifacts/screenshots/after-390.png",
-        "sha256": "cc2df8b4470fa9de79483d2201ce53d968b8368c3898f17ef50955b7db4bfeb9"
+        "sha256": "c4ac94ff7630940fdf47959d9aadcf91e2758cef54e867b3a8e3f3c673ca746a"
       },
       {
         "file": "artifacts/screenshots/hero-390.png",
@@ -111,7 +111,7 @@
       },
       {
         "file": "artifacts/screenshots/after-768.png",
-        "sha256": "b8a3c4800da5b0006e4c196ae93f8a5536aa8219d9c8cfc0e986529e41325609"
+        "sha256": "56b38668ca14609d7b732f2114e7124e4e6039954ca99291e3fd1a851115d33b"
       },
       {
         "file": "artifacts/screenshots/hero-768.png",
@@ -119,7 +119,7 @@
       },
       {
         "file": "artifacts/screenshots/after-1280.png",
-        "sha256": "7491048d4c1c8a94c656755b1703daee5f3c0365807829cc6588a47010ea0a01"
+        "sha256": "cf1a38d25197331c4cd6295442f7da187e15cb139810df9e9d93fa4110661c7e"
       },
       {
         "file": "artifacts/screenshots/hero-1280.png",
@@ -127,7 +127,7 @@
       },
       {
         "file": "artifacts/screenshots/after-1440.png",
-        "sha256": "bb4422dbfeb15bf4e90d7a2863e36710b7826b06ce95eb8cdf5486a69f52d78b"
+        "sha256": "fed6f5d068e765b8cb6fd9b5758132f35ec3d58772cccec8f6f864e8a58de45a"
       },
       {
         "file": "artifacts/screenshots/hero-1440.png",
