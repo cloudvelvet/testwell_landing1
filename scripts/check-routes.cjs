@@ -4,7 +4,7 @@ const assert=require('node:assert/strict');
 // 로그인은 제출하지 않고 실제 CTA가 보존하는 목적지만 확인한다.
 (async()=>{
  const browser=await chromium.launch({channel:'chrome',headless:true});const results=[];
- for(const [label,path,mobile] of [['문항 관리에서 시작','/q_bank/question',false],['내 검사 확인','/survey/inventory',true],['결과 확인','/survey/my_status',true]]){
+ for(const [label,path,mobile] of [['검사 만들기','/q_bank/question',false],['내 검사 확인','/survey/inventory',true],['결과 확인','/survey/my_status',true]]){
   const page=await browser.newPage({viewport:mobile?{width:390,height:844}:{width:1280,height:800}});
   await page.goto('http://127.0.0.1:5175/',{waitUntil:'networkidle'});
   if(label==='결과 확인')await page.getByRole('button',{name:'메뉴 열기'}).click();
