@@ -62,13 +62,11 @@ h2 { font-size: clamp(28px,3vw,40px); letter-spacing: -.035em; line-height: 1.35
 .capability-grid p { font-size: 16px; color: #55554f; line-height: 1.8; margin: 14px 0 18px; }
 .capability-grid a { margin-top: auto; }
 .section-note { font-size: 14px; line-height: 1.75; color: #656159; margin-top: 24px; }
-.measurement { border-top: 1px solid #cfcbc3; padding: 60px 0; background: #EDE7DB; }
-.measurement-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
-.measurement h2 { font-size: 30px; max-width: 400px; }
-.measurement .section-description { margin-top: 20px; }
-.measurement dl > div + div { margin-top: 20px; }
-.measurement dt { font-size: 16px; font-weight: 650; }
-.measurement dd { font-size: 15px; line-height: 1.8; color: #55554f; margin-top: 5px; }
+.measurement { border-top: 1px solid #cfcbc3; margin-top: 40px; padding-top: 32px; }
+.measurement-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 64px; align-items: start; }
+.measurement .eyebrow { margin-bottom: 12px; }
+.measurement h3 { font-size: 24px; max-width: 360px; line-height: 1.45; letter-spacing: -.025em; font-weight: 600; }
+.measurement .section-description { max-width: 590px; }
 .next-section { padding: 60px 0; }
 .next-section .eyebrow { color: #b8b8b8; margin-bottom: 14px; }
 .next-section h2 { font-size: 28px; }
@@ -127,8 +125,8 @@ h2 { font-size: clamp(28px,3vw,40px); letter-spacing: -.035em; line-height: 1.35
   .capability-grid article + article { border-left: 0; border-top: 1px solid #cfcbc3; padding-left: 0; }
   .capability-grid p { margin: 10px 0; }
   .section-note { margin-top: 14px; }
-  .measurement { padding: 44px 0; }
-  .measurement h2 { font-size: 28px; }
+  .measurement { margin-top: 28px; padding-top: 26px; }
+  .measurement h3 { font-size: 23px; }
   .next-section { padding: 44px 0 24px; }
   .next-section h2 { font-size: 25px; }
   .next-links { grid-template-columns: 1fr; gap: 0; }

@@ -2,6 +2,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { LINKS } from '@/constants/links';
 import { SITE_CONTENT } from '@/constants/content';
 import { ProductFlow } from '@/components/ProductFlow';
+import { MeasurementContext } from '@/components/MeasurementContext';
 
 export function WhatIsTestWell() {
   const { capabilities } = SITE_CONTENT;
@@ -22,6 +23,7 @@ export function WhatIsTestWell() {
           ))}
         </div>
         <p className="section-note">{SITE_CONTENT.shared.externalNote}</p>
+        <MeasurementContext />
       </div>
     </section>
   );
