@@ -1,5 +1,13 @@
 {
-  "date": "2026-09-08",
+  "date": "2026-09-08T04:13:04.091Z",
+  "sourceHashes": {
+    "src/constants/content.ts": "c1bf4689a0874c831e8bf9b42c31c67424b3905312897b1a41bf429b674f02fa",
+    "src/constants/links.ts": "696cb74e62fa257df98ebb5ab8bfed8cb98e357d795d900517e162ed794d9653",
+    "src/index.css": "9f725baf5a4ae1fb7e4cbdded445445f3df6c7cd8f942cee8e0eb499463e43a0",
+    "src/App.tsx": "924ace5cecb5abbec8e178a8707a1d462f78d8e0a828ecd41141aa3c77d1cb40",
+    "src/components/MeasurementContext.tsx": "97d4e783bfa49c60f30ce8b6d63c1485de9edf216c936bde5e3859a3b070778b",
+    "index.html": "35de7aa18f99ce3df047ff29eed7d442f86f3848eed9099c94012e8f80010402"
+  },
   "results": [
     {
       "width": 390,
@@ -85,7 +93,7 @@
           "href": "https://testwell.kr/authority/login?next=/"
         },
         {
-          "label": "문항 관리에서 시작",
+          "label": "검사 만들기",
           "href": "https://testwell.kr/q_bank/question"
         },
         {
@@ -136,7 +144,37 @@
       "focus": {
         "style": "solid",
         "width": "3px"
-      }
+      },
+      "copy": {
+        "heroDescription": "TestWell은 심리검사와 학습평가를 위한 온라인 플랫폼입니다. 검사 제작·운영자는 문항과 검사지를 준비하고, 참여자는 검사에 응답하고 결과를 확인합니다.",
+        "primaryLabel": "검사 만들기",
+        "primaryHref": "https://testwell.kr/q_bank/question",
+        "creationNote": "로그인 후 질문 관리에서 시작하세요.",
+        "figureCaption": "문항을 모아 검사지를 구성하고, 참여할 사람은 그룹으로 관리할 수 있습니다. 필요한 작업부터 시작하세요.",
+        "measurementTitle": "이 검사로 무엇을 알고 싶나요?",
+        "measurementDescription": "태도나 경험을 묻는 문항과 지식이나 수행을 확인하는 문제는 측정하려는 내용과 결과 해석 방식이 다릅니다. 먼저 무엇을 알아보려는지 정하고, 목적에 맞는 문항과 해석 기준을 준비하세요.",
+        "browseLabel": "공식 서비스에서 둘러보기",
+        "browseHref": "https://testwell.kr/"
+      },
+      "metadata": {
+        "title": "TestWell | 검사 제작·참여·결과 확인",
+        "description": "심리검사와 학습평가를 위한 온라인 플랫폼. 문항과 검사지를 준비하고, 내 검사와 결과를 확인하세요.",
+        "ogTitle": "TestWell | 검사 제작·참여·결과 확인",
+        "ogDescription": "심리검사와 학습평가를 위한 온라인 플랫폼. 문항과 검사지를 준비하고, 내 검사와 결과를 확인하세요.",
+        "ogType": "website",
+        "canonical": null,
+        "ogImage": null
+      },
+      "screenshots": [
+        {
+          "file": "artifacts/screenshots/after-390.png",
+          "sha256": "cc2df8b4470fa9de79483d2201ce53d968b8368c3898f17ef50955b7db4bfeb9"
+        },
+        {
+          "file": "artifacts/screenshots/hero-390.png",
+          "sha256": "3ec0008c66890a243d45a209647f0afdcbfc2625a5d16d5029e8939ea96653f5"
+        }
+      ]
     },
     {
       "width": 768,
@@ -222,7 +260,7 @@
           "href": "https://testwell.kr/authority/login?next=/"
         },
         {
-          "label": "문항 관리에서 시작",
+          "label": "검사 만들기",
           "href": "https://testwell.kr/q_bank/question"
         },
         {
@@ -273,7 +311,37 @@
       "focus": {
         "style": "solid",
         "width": "3px"
-      }
+      },
+      "copy": {
+        "heroDescription": "TestWell은 심리검사와 학습평가를 위한 온라인 플랫폼입니다. 검사 제작·운영자는 문항과 검사지를 준비하고, 참여자는 검사에 응답하고 결과를 확인합니다.",
+        "primaryLabel": "검사 만들기",
+        "primaryHref": "https://testwell.kr/q_bank/question",
+        "creationNote": "로그인 후 질문 관리에서 시작하세요.",
+        "figureCaption": "문항을 모아 검사지를 구성하고, 참여할 사람은 그룹으로 관리할 수 있습니다. 필요한 작업부터 시작하세요.",
+        "measurementTitle": "이 검사로 무엇을 알고 싶나요?",
+        "measurementDescription": "태도나 경험을 묻는 문항과 지식이나 수행을 확인하는 문제는 측정하려는 내용과 결과 해석 방식이 다릅니다. 먼저 무엇을 알아보려는지 정하고, 목적에 맞는 문항과 해석 기준을 준비하세요.",
+        "browseLabel": "공식 서비스에서 둘러보기",
+        "browseHref": "https://testwell.kr/"
+      },
+      "metadata": {
+        "title": "TestWell | 검사 제작·참여·결과 확인",
+        "description": "심리검사와 학습평가를 위한 온라인 플랫폼. 문항과 검사지를 준비하고, 내 검사와 결과를 확인하세요.",
+        "ogTitle": "TestWell | 검사 제작·참여·결과 확인",
+        "ogDescription": "심리검사와 학습평가를 위한 온라인 플랫폼. 문항과 검사지를 준비하고, 내 검사와 결과를 확인하세요.",
+        "ogType": "website",
+        "canonical": null,
+        "ogImage": null
+      },
+      "screenshots": [
+        {
+          "file": "artifacts/screenshots/after-768.png",
+          "sha256": "b8a3c4800da5b0006e4c196ae93f8a5536aa8219d9c8cfc0e986529e41325609"
+        },
+        {
+          "file": "artifacts/screenshots/hero-768.png",
+          "sha256": "125fef82a40b08dd054c4175e7a6f2113baa3bd51cbc4eb8751ea1cb8bf32b9d"
+        }
+      ]
     },
     {
       "width": 1280,
@@ -359,7 +427,7 @@
           "href": "https://testwell.kr/authority/login?next=/"
         },
         {
-          "label": "문항 관리에서 시작",
+          "label": "검사 만들기",
           "href": "https://testwell.kr/q_bank/question"
         },
         {
@@ -410,7 +478,37 @@
       "focus": {
         "style": "solid",
         "width": "3px"
-      }
+      },
+      "copy": {
+        "heroDescription": "TestWell은 심리검사와 학습평가를 위한 온라인 플랫폼입니다. 검사 제작·운영자는 문항과 검사지를 준비하고, 참여자는 검사에 응답하고 결과를 확인합니다.",
+        "primaryLabel": "검사 만들기",
+        "primaryHref": "https://testwell.kr/q_bank/question",
+        "creationNote": "로그인 후 질문 관리에서 시작하세요.",
+        "figureCaption": "문항을 모아 검사지를 구성하고, 참여할 사람은 그룹으로 관리할 수 있습니다. 필요한 작업부터 시작하세요.",
+        "measurementTitle": "이 검사로 무엇을 알고 싶나요?",
+        "measurementDescription": "태도나 경험을 묻는 문항과 지식이나 수행을 확인하는 문제는 측정하려는 내용과 결과 해석 방식이 다릅니다. 먼저 무엇을 알아보려는지 정하고, 목적에 맞는 문항과 해석 기준을 준비하세요.",
+        "browseLabel": "공식 서비스에서 둘러보기",
+        "browseHref": "https://testwell.kr/"
+      },
+      "metadata": {
+        "title": "TestWell | 검사 제작·참여·결과 확인",
+        "description": "심리검사와 학습평가를 위한 온라인 플랫폼. 문항과 검사지를 준비하고, 내 검사와 결과를 확인하세요.",
+        "ogTitle": "TestWell | 검사 제작·참여·결과 확인",
+        "ogDescription": "심리검사와 학습평가를 위한 온라인 플랫폼. 문항과 검사지를 준비하고, 내 검사와 결과를 확인하세요.",
+        "ogType": "website",
+        "canonical": null,
+        "ogImage": null
+      },
+      "screenshots": [
+        {
+          "file": "artifacts/screenshots/after-1280.png",
+          "sha256": "7491048d4c1c8a94c656755b1703daee5f3c0365807829cc6588a47010ea0a01"
+        },
+        {
+          "file": "artifacts/screenshots/hero-1280.png",
+          "sha256": "36f5b8bc7ef23bb10dfca47d67a39216ea9b8fca043835264fffcbe583ccbbd8"
+        }
+      ]
     },
     {
       "width": 1440,
@@ -496,7 +594,7 @@
           "href": "https://testwell.kr/authority/login?next=/"
         },
         {
-          "label": "문항 관리에서 시작",
+          "label": "검사 만들기",
           "href": "https://testwell.kr/q_bank/question"
         },
         {
@@ -547,7 +645,37 @@
       "focus": {
         "style": "solid",
         "width": "3px"
-      }
+      },
+      "copy": {
+        "heroDescription": "TestWell은 심리검사와 학습평가를 위한 온라인 플랫폼입니다. 검사 제작·운영자는 문항과 검사지를 준비하고, 참여자는 검사에 응답하고 결과를 확인합니다.",
+        "primaryLabel": "검사 만들기",
+        "primaryHref": "https://testwell.kr/q_bank/question",
+        "creationNote": "로그인 후 질문 관리에서 시작하세요.",
+        "figureCaption": "문항을 모아 검사지를 구성하고, 참여할 사람은 그룹으로 관리할 수 있습니다. 필요한 작업부터 시작하세요.",
+        "measurementTitle": "이 검사로 무엇을 알고 싶나요?",
+        "measurementDescription": "태도나 경험을 묻는 문항과 지식이나 수행을 확인하는 문제는 측정하려는 내용과 결과 해석 방식이 다릅니다. 먼저 무엇을 알아보려는지 정하고, 목적에 맞는 문항과 해석 기준을 준비하세요.",
+        "browseLabel": "공식 서비스에서 둘러보기",
+        "browseHref": "https://testwell.kr/"
+      },
+      "metadata": {
+        "title": "TestWell | 검사 제작·참여·결과 확인",
+        "description": "심리검사와 학습평가를 위한 온라인 플랫폼. 문항과 검사지를 준비하고, 내 검사와 결과를 확인하세요.",
+        "ogTitle": "TestWell | 검사 제작·참여·결과 확인",
+        "ogDescription": "심리검사와 학습평가를 위한 온라인 플랫폼. 문항과 검사지를 준비하고, 내 검사와 결과를 확인하세요.",
+        "ogType": "website",
+        "canonical": null,
+        "ogImage": null
+      },
+      "screenshots": [
+        {
+          "file": "artifacts/screenshots/after-1440.png",
+          "sha256": "bb4422dbfeb15bf4e90d7a2863e36710b7826b06ce95eb8cdf5486a69f52d78b"
+        },
+        {
+          "file": "artifacts/screenshots/hero-1440.png",
+          "sha256": "5235f3bc8df537c53ec7aa8c6b1a20cb1a063dce6ea281830e4ee089129e1480"
+        }
+      ]
     }
   ],
   "contrast": [

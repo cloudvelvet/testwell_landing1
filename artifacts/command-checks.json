@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-09-08T04:17:01.795Z",
+  "attempts": [
+    {
+      "command": "npm ci",
+      "exitCode": 1,
+      "reason": "실행 중인 개발 서버의 esbuild.exe 파일 잠금으로 EPERM 발생"
+    },
+    {
+      "command": "npm ci",
+      "exitCode": 0,
+      "resolution": "해당 작업 디렉터리의 개발 서버와 esbuild 프로세스를 종료한 뒤 재실행"
+    }
+  ],
+  "final": {
+    "npm ci": {
+      "exitCode": 0,
+      "packagesAdded": 312,
+      "packagesAudited": 313,
+      "reportedVulnerabilities": {
+        "moderate": 1,
+        "high": 1
+      },
+      "note": "의존성 버전 변경 없이 설치 완료"
+    },
+    "npm run build": {
+      "exitCode": 0,
+      "viteVersion": "5.4.21",
+      "modulesTransformed": 1958
+    },
+    "npm run doctor": {
+      "exitCode": 0,
+      "score": 100,
+      "issues": 0
+    }
+  },
+  "provenance": "이번 정리 작업에서 실행한 명령의 종료 코드와 출력 요약. 원시 로그가 아님."
+}
