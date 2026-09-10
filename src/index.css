@@ -48,11 +48,12 @@
 h2 { font-size: clamp(28px,3vw,40px); letter-spacing: -.035em; line-height: 1.35; font-weight: 600; }
 .section-description { font-size: 16px; line-height: 1.85; color: #55554f; max-width: 490px; }
 .capability-circles { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; margin: 40px 0 0; padding: 0; list-style: none; }
-.capability-circle { width: 100%; max-width: 176px; aspect-ratio: 1; justify-self: center; border: 1px solid #bdb9b1; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; text-align: center; }
-.capability-circle span { font-size: 16px; font-weight: 600; line-height: 1.5; }
+.capability-circle { width: 100%; max-width: 160px; aspect-ratio: 1; justify-self: center; border: 1px solid #bdb9b1; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; text-align: center; }
+.capability-circle span { font-size: 18px; font-weight: 600; line-height: 1.5; }
 .capability-circle svg { flex-shrink: 0; }
 @media(max-width:1023px) { .capability-circles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media(max-width:639px) { .capability-circles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } }
+@media(max-width:359px) { .capability-circle { padding: 16px; } }
 .product-flow { margin-top: 44px; }
 .flow-objects { display: grid; grid-template-columns: 1fr 1fr 1fr 2fr; align-items: center; border-top: 1px solid #111; border-bottom: 1px solid #bdb9b1; min-height: 150px; gap: 20px; }
 .flow-object { display: flex; align-items: center; gap: 16px; }
