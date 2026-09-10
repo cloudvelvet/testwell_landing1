@@ -20,7 +20,7 @@ export function Hero() {
           </div>
           <ParticipantEntry />
           <div>
-            <a href={LINKS.myTests} className="secondary-entry-link" aria-describedby="browse-note">
+            <a href={LINKS.browseTests} className="secondary-entry-link" aria-describedby="browse-note">
               {hero.browse}<ArrowRight size={20} aria-hidden="true" />
             </a>
             <p id="browse-note" className="entry-note">{hero.browseNote}</p>

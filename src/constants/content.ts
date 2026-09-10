@@ -18,7 +18,7 @@ export const SITE_CONTENT = {
     ticket: '응시권 입력',
     ticketNote: '받은 응시권 코드로 검사에 참여하세요.',
     browse: '검사 보기',
-    browseNote: '로그인 후 내 검사 목록을 확인하세요.',
+    browseNote: '공개된 검사를 둘러보세요.',
   },
   participant: {
     title: '참여할 검사가 있나요?',
@@ -28,7 +28,7 @@ export const SITE_CONTENT = {
   },
   capabilities: {
     label: 'TestWell 주요 기능',
-    title: '질문을 준비하고,\n검사로 구성합니다.',
+    title: '검사 준비부터\n결과 확인까지.',
     description: '문항을 준비하고 검사를 운영하는 일부터, 검사 참여와 결과 확인까지 지원합니다.',
     displayItems: ['문항 작성', '검사지 구성', '참여자 관리', '설문 배포', '검사 참여', '결과 확인'],
     figureLabel: 'TestWell 제작 도구의 관계',
