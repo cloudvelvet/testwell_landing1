@@ -15,6 +15,10 @@ export const SITE_CONTENT = {
     description: 'TestWell은 심리검사와 학습평가를 위한 온라인 플랫폼입니다. 검사 제작·운영자는 문항과 검사지를 준비하고, 참여자는 검사에 응답하고 결과를 확인합니다.',
     primary: '검사 만들기',
     note: '로그인 후 질문 관리에서 시작하세요.',
+    ticket: '응시권 입력',
+    ticketNote: '받은 응시권 코드로 검사에 참여하세요.',
+    browse: '검사 보기',
+    browseNote: '로그인 후 내 검사 목록을 확인하세요.',
   },
   participant: {
     title: '참여할 검사가 있나요?',
@@ -23,9 +27,10 @@ export const SITE_CONTENT = {
     note: '로그인 후 이용할 수 있습니다.',
   },
   capabilities: {
-    label: '검사를 만드는 사람을 위한 도구',
+    label: 'TestWell 주요 기능',
     title: '질문을 준비하고,\n검사로 구성합니다.',
-    description: '문항과 검사지, 참여할 사람들을 각각 관리합니다. 지금 필요한 작업의 메뉴로 바로 이동할 수 있습니다.',
+    description: '문항을 준비하고 검사를 운영하는 일부터, 검사 참여와 결과 확인까지 지원합니다.',
+    displayItems: ['문항 작성', '검사지 구성', '참여자 관리', '설문 배포', '검사 참여', '결과 확인'],
     figureLabel: 'TestWell 제작 도구의 관계',
     figureCaption: '문항을 모아 검사지를 구성하고, 참여할 사람은 그룹으로 관리할 수 있습니다. 필요한 작업부터 시작하세요.',
     relation: '문항을 모아 구성',
