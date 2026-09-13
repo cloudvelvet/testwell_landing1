@@ -6,7 +6,7 @@ const FEATURE_ICONS = [FilePenLine, Files, UsersRound, Send, ClipboardCheck, Cha
 export function ProductFlow() {
   const { capabilities } = SITE_CONTENT;
   return (
-    <ul className="capability-circles" aria-label="TestWell 주요 기능">
+    <ul className="capability-circles" aria-label={capabilities.listLabel}>
       {capabilities.displayItems.map((label, index) => {
         const Icon = FEATURE_ICONS[index];
         return (

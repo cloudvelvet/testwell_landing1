@@ -27,9 +27,9 @@ export function Hero() {
           </div>
           <div>
             <a href={LINKS.result} className="secondary-entry-link" aria-describedby="result-note">
-              결과 확인<ArrowRight size={20} aria-hidden="true" />
+              {hero.result}<ArrowRight size={20} aria-hidden="true" />
             </a>
-            <p id="result-note" className="entry-note">참여한 검사의 결과를 확인하세요.</p>
+            <p id="result-note" className="entry-note">{hero.resultNote}</p>
           </div>
         </div>
       </div>

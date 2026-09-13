@@ -4,7 +4,7 @@ import { LINKS } from '@/constants/links';
 import { SITE_CONTENT } from '@/constants/content';
 
 export function ParticipantEntry() {
-  const { hero } = SITE_CONTENT;
+  const { hero, ticketForm } = SITE_CONTENT;
   const [open, setOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   useEffect(() => { if (open) inputRef.current?.focus(); }, [open]);
@@ -12,7 +12,7 @@ export function ParticipantEntry() {
     event.preventDefault();
     const code = inputRef.current?.value.trim();
     if (!code) {
-      inputRef.current?.setCustomValidity('응시권 코드를 입력해 주세요.');
+      inputRef.current?.setCustomValidity(ticketForm.emptyError);
       inputRef.current?.reportValidity();
       return;
     }
@@ -25,10 +25,10 @@ export function ParticipantEntry() {
       </button>
       <p className="entry-note">{hero.ticketNote}</p>
       <form id="ticket-form" className="ticket-form" hidden={!open} onSubmit={submitTicket}>
-        <label htmlFor="ticket-code">응시권 코드</label>
-        <input ref={inputRef} id="ticket-code" name="ticketCode" type="text" required autoComplete="off" autoCapitalize="none" spellCheck={false} placeholder="코드를 입력하세요" onInput={event => event.currentTarget.setCustomValidity('')} />
-        <button type="submit" className="primary-link">검사 시작</button>
-        <p className="entry-note">TestWell 공식 서비스로 이동합니다.</p>
+        <label htmlFor="ticket-code">{ticketForm.label}</label>
+        <input ref={inputRef} id="ticket-code" name="ticketCode" type="text" required autoComplete="off" autoCapitalize="none" spellCheck={false} placeholder={ticketForm.placeholder} onInput={event => event.currentTarget.setCustomValidity('')} />
+        <button type="submit" className="primary-link">{ticketForm.submit}</button>
+        <p className="entry-note">{ticketForm.note}</p>
       </form>
     </div>
   );
