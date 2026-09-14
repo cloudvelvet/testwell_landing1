@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-09-14T03:44:51.153Z",
+  "baseline": "b078712",
+  "build": {
+    "exitCode": 0
+  },
+  "doctor": {
+    "exitCode": 0,
+    "score": 100
+  },
+  "browser": {
+    "exitCode": 0,
+    "widths": [
+      390,
+      768,
+      1280,
+      1440
+    ],
+    "ticketValidation": "빈 값·공백·수정 후 유효성 회복·열림 시 포커스 확인"
+  },
+  "routes": {
+    "exitCode": 0,
+    "scope": "로그인 게이트와 next 보존; 유효 응시권 사용은 미검증"
+  },
+  "diffCheck": {
+    "exitCode": 0
+  }
+}

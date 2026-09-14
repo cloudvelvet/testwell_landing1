@@ -1,12 +1,16 @@
 [
   {
-    "checkedAt": "2026-09-08T05:00:23.421Z",
+    "checkedAt": "2026-09-14T03:52:50.111Z",
     "sourceHashes": {
-      "src/constants/content.ts": "9904f56556b472eabf3733022f04395c07b4499ec9cf7b2915e2bd6476cf474a",
-      "src/constants/links.ts": "696cb74e62fa257df98ebb5ab8bfed8cb98e357d795d900517e162ed794d9653",
-      "src/index.css": "9f725baf5a4ae1fb7e4cbdded445445f3df6c7cd8f942cee8e0eb499463e43a0",
+      "src/constants/content.ts": "54e3c862d32b46e0ccfe4e2733c1708e5ad337ee746d409a2f43a63ea88b3f1e",
+      "src/constants/links.ts": "1db040f23280c5c68167a69124a73635874930bb42ec6525c612492be7690a55",
+      "src/index.css": "f9bdac21c2d06660a499395122957fe02278aa3fef23bd1e1d4d112fd6ad66f6",
       "src/App.tsx": "924ace5cecb5abbec8e178a8707a1d462f78d8e0a828ecd41141aa3c77d1cb40",
       "src/components/MeasurementContext.tsx": "97d4e783bfa49c60f30ce8b6d63c1485de9edf216c936bde5e3859a3b070778b",
+      "src/components/Hero.tsx": "ae27a30340fa190241cad2921cb0d3cfa005050eeedbb359532dc89b8aa163f2",
+      "src/components/ParticipantEntry.tsx": "9794b3a8a88d046b99abb481742245e5eae3d2b9d4e067dc7af9ba894ea61a8a",
+      "src/components/ProductFlow.tsx": "85e2eb7b0995bbe59cfdba04e538d4b215b82d5696349c4eb06287d4a154bdc1",
+      "src/components/WhatIsTestWell.tsx": "25edcccacc7c7b984460cc8b45b61624bec8e25e756704625a047296c021e43b",
       "index.html": "35de7aa18f99ce3df047ff29eed7d442f86f3848eed9099c94012e8f80010402"
     },
     "requestedUrl": "https://testwell.kr/q_bank/question",
@@ -17,30 +21,38 @@
     "loginSubmitted": false
   },
   {
-    "checkedAt": "2026-09-08T05:00:27.415Z",
+    "checkedAt": "2026-09-14T03:52:54.101Z",
     "sourceHashes": {
-      "src/constants/content.ts": "9904f56556b472eabf3733022f04395c07b4499ec9cf7b2915e2bd6476cf474a",
-      "src/constants/links.ts": "696cb74e62fa257df98ebb5ab8bfed8cb98e357d795d900517e162ed794d9653",
-      "src/index.css": "9f725baf5a4ae1fb7e4cbdded445445f3df6c7cd8f942cee8e0eb499463e43a0",
+      "src/constants/content.ts": "54e3c862d32b46e0ccfe4e2733c1708e5ad337ee746d409a2f43a63ea88b3f1e",
+      "src/constants/links.ts": "1db040f23280c5c68167a69124a73635874930bb42ec6525c612492be7690a55",
+      "src/index.css": "f9bdac21c2d06660a499395122957fe02278aa3fef23bd1e1d4d112fd6ad66f6",
       "src/App.tsx": "924ace5cecb5abbec8e178a8707a1d462f78d8e0a828ecd41141aa3c77d1cb40",
       "src/components/MeasurementContext.tsx": "97d4e783bfa49c60f30ce8b6d63c1485de9edf216c936bde5e3859a3b070778b",
+      "src/components/Hero.tsx": "ae27a30340fa190241cad2921cb0d3cfa005050eeedbb359532dc89b8aa163f2",
+      "src/components/ParticipantEntry.tsx": "9794b3a8a88d046b99abb481742245e5eae3d2b9d4e067dc7af9ba894ea61a8a",
+      "src/components/ProductFlow.tsx": "85e2eb7b0995bbe59cfdba04e538d4b215b82d5696349c4eb06287d4a154bdc1",
+      "src/components/WhatIsTestWell.tsx": "25edcccacc7c7b984460cc8b45b61624bec8e25e756704625a047296c021e43b",
       "index.html": "35de7aa18f99ce3df047ff29eed7d442f86f3848eed9099c94012e8f80010402"
     },
     "requestedUrl": "https://testwell.kr/survey/inventory",
-    "label": "내 검사 확인",
+    "label": "내 검사",
     "viewport": "390",
-    "clicks": 1,
+    "clicks": 2,
     "finalUrl": "https://testwell.kr/authority/login?next=/survey/inventory",
     "loginSubmitted": false
   },
   {
-    "checkedAt": "2026-09-08T05:00:31.056Z",
+    "checkedAt": "2026-09-14T03:52:57.736Z",
     "sourceHashes": {
-      "src/constants/content.ts": "9904f56556b472eabf3733022f04395c07b4499ec9cf7b2915e2bd6476cf474a",
-      "src/constants/links.ts": "696cb74e62fa257df98ebb5ab8bfed8cb98e357d795d900517e162ed794d9653",
-      "src/index.css": "9f725baf5a4ae1fb7e4cbdded445445f3df6c7cd8f942cee8e0eb499463e43a0",
+      "src/constants/content.ts": "54e3c862d32b46e0ccfe4e2733c1708e5ad337ee746d409a2f43a63ea88b3f1e",
+      "src/constants/links.ts": "1db040f23280c5c68167a69124a73635874930bb42ec6525c612492be7690a55",
+      "src/index.css": "f9bdac21c2d06660a499395122957fe02278aa3fef23bd1e1d4d112fd6ad66f6",
       "src/App.tsx": "924ace5cecb5abbec8e178a8707a1d462f78d8e0a828ecd41141aa3c77d1cb40",
       "src/components/MeasurementContext.tsx": "97d4e783bfa49c60f30ce8b6d63c1485de9edf216c936bde5e3859a3b070778b",
+      "src/components/Hero.tsx": "ae27a30340fa190241cad2921cb0d3cfa005050eeedbb359532dc89b8aa163f2",
+      "src/components/ParticipantEntry.tsx": "9794b3a8a88d046b99abb481742245e5eae3d2b9d4e067dc7af9ba894ea61a8a",
+      "src/components/ProductFlow.tsx": "85e2eb7b0995bbe59cfdba04e538d4b215b82d5696349c4eb06287d4a154bdc1",
+      "src/components/WhatIsTestWell.tsx": "25edcccacc7c7b984460cc8b45b61624bec8e25e756704625a047296c021e43b",
       "index.html": "35de7aa18f99ce3df047ff29eed7d442f86f3848eed9099c94012e8f80010402"
     },
     "requestedUrl": "https://testwell.kr/survey/my_status",

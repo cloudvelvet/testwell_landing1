@@ -12,17 +12,16 @@ const { content, links, sourceHashes, snapshot, sha256 } = require('./current-so
   await page.goto('http://127.0.0.1:5175/',{waitUntil:'networkidle'});
   await page.evaluate(() => document.fonts.ready);
   assert.equal(await page.locator('.hero-description').innerText(), snapshot.heroDescription, 'Hero 문구 불일치');
-  assert.equal(await page.locator('.primary-link').innerText(), snapshot.primaryLabel, '버튼 문구 불일치');
-  assert.equal(await page.locator('.primary-link').getAttribute('href'), snapshot.primaryHref, '버튼 목적지 불일치');
+  assert.equal(await page.locator('.creator-entry .primary-link').innerText(), snapshot.primaryLabel, '버튼 문구 불일치');
+  assert.equal(await page.locator('.creator-entry .primary-link').getAttribute('href'), snapshot.primaryHref, '버튼 목적지 불일치');
   assert.equal(await page.locator('#create-note').innerText(), snapshot.creationNote);
-  assert.equal(await page.locator('.product-flow figcaption').innerText(), snapshot.figureCaption);
+  assert.deepEqual(await page.locator('.capability-circle span').allTextContents(), [...content.capabilities.displayItems]);
   assert.equal(await page.locator('#measurement-title').innerText(), snapshot.measurementTitle);
   assert.equal(await page.locator('.measurement .section-description').innerText(), snapshot.measurementDescription);
   const expectedLinks = [
     ...content.header.nav.map(item => [item.label, links[item.link]]),
     [content.header.login, links.login], [content.hero.primary, links.questionBank],
-    [content.participant.action, links.myTests],
-    ...content.capabilities.items.map(item => [item.action, links[item.link]]),
+    [content.hero.browse, links.browseTests], [content.hero.result, links.result],
     ...content.finalCta.links.map(item => [item.title + ' ' + item.action, links[item.link]]),
     ...content.footer.links.map(item => [item.label, links[item.link]]),
   ];
@@ -47,7 +46,7 @@ const { content, links, sourceHashes, snapshot, sha256 } = require('./current-so
   assert.ok(state.headings.every((h,i)=>i===0||h.level<=state.headings[i-1].level+1),'제목 단계');
   assert.deepEqual(state.brokenAnchors,[]);assert.deepEqual(state.smallText,[]);assert.equal(state.inaccessibleSvg,0);assert.equal(state.imagesWithoutAlt,0);assert.ok(state.reduce);
   assert.equal(await page.locator('input[type="search"]').count(),0,'이전 검색창');
-  assert.equal(await page.locator('#top a').count(),2,'Hero CTA는 두 개');
+  assert.equal(await page.locator('#top a').count(),3,'Hero 링크는 세 개');
   await page.keyboard.press('Tab');
   assert.equal(await page.evaluate(()=>document.activeElement.textContent),'본문으로 건너뛰기');
   await page.keyboard.press('Enter');
@@ -62,8 +61,21 @@ const { content, links, sourceHashes, snapshot, sha256 } = require('./current-so
     await button.click();await page.setViewportSize({width:1280,height:800});await page.waitForFunction(()=>document.querySelector('.menu-trigger').getAttribute('aria-expanded')==='false');await page.setViewportSize({width,height});
     await button.click();for(let i=0;i<5;i++)await page.keyboard.press('Tab');assert.equal(await button.getAttribute('aria-expanded'),'false','포커스 이탈 닫기');
   }
-  await page.locator('.primary-link').focus();
-  const focus=await page.locator('.primary-link').evaluate(e=>({style:getComputedStyle(e).outlineStyle,width:getComputedStyle(e).outlineWidth}));
+  const ticketButton=page.getByRole('button',{name:content.hero.ticket,exact:true});
+  await ticketButton.click();
+  const code=page.getByLabel(content.ticketForm.label,{exact:true});
+  assert.ok(await code.evaluate(e=>e===document.activeElement));
+  await page.getByRole('button',{name:content.ticketForm.submit,exact:true}).click();
+  assert.equal(await code.evaluate(e=>e.validationMessage),content.ticketForm.emptyError);
+  await code.fill('   ');
+  await page.getByRole('button',{name:content.ticketForm.submit,exact:true}).click();
+  assert.equal(await code.evaluate(e=>e.validationMessage),content.ticketForm.emptyError);
+  await code.fill('sample');assert.ok(await code.evaluate(e=>e.validity.valid));
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+  await ticketButton.click();
+  await page.keyboard.press('Tab');
+  await page.locator('.creator-entry .primary-link').focus();
+  const focus=await page.locator('.creator-entry .primary-link').evaluate(e=>({style:getComputedStyle(e).outlineStyle,width:getComputedStyle(e).outlineWidth}));
   assert.equal(focus.style,'solid');assert.equal(focus.width,'3px');
   await page.evaluate(()=>{document.activeElement.blur();scrollTo(0,0);});
   await page.screenshot({path:`artifacts/screenshots/after-${width}.png`,fullPage:true});

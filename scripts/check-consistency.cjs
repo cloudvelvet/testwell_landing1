@@ -17,7 +17,7 @@ for (const result of after.results) {
   for (const screenshot of result.screenshots) { assert.equal(sha256(screenshot.file),screenshot.sha256,'캡처 지문 불일치');screenshots.push(screenshot); }
 }
 assert.equal(screenshots.length,8);
-const expectedRoutes = [[content.hero.primary,links.questionBank],[content.participant.action,links.myTests],[content.header.nav.find(item=>item.link==='result').label,links.result]];
+const expectedRoutes = [[content.hero.primary,links.questionBank],[content.header.nav.find(item=>item.link==='myTests').label,links.myTests],[content.header.nav.find(item=>item.link==='result').label,links.result]];
 assert.equal(routes.length,3);
 for (const [label,href] of expectedRoutes) {
   const route=routes.find(item=>item.label===label);assert.ok(route);assert.equal(route.requestedUrl,href);
@@ -39,11 +39,11 @@ assert.ok(!html.includes('rel="canonical"'));assert.ok(!html.includes('property=
 for(const command of ['npm ci','npm run build','npm run doctor']) assert.equal(commands.final[command].exitCode,0);
 assert.equal(commands.final['npm run doctor'].score,100);
 const branch=execFileSync('git',['branch','--show-current'],{encoding:'utf8'}).trim();assert.equal(branch,'codex/landing-v3-reference-led');
-const design=spawnSync('git',['diff','--quiet','2401236','--','src/components','src/index.css','src/App.tsx','tailwind.config.js','src/constants/links.ts']);assert.equal(design.status,0,'확정된 디자인/구조/링크 변경');
+const design=spawnSync('git',['diff','--quiet','b078712','--','src/components/Hero.tsx','src/components/ProductFlow.tsx','src/components/WhatIsTestWell.tsx','src/components/MeasurementContext.tsx','src/index.css','src/App.tsx','tailwind.config.js','src/constants/links.ts']);assert.equal(design.status,0,'확정된 디자인/구조/링크 변경');
 const diff=spawnSync('git',['diff','--check'],{encoding:'utf8'});assert.equal(diff.status,0,diff.stdout+diff.stderr);
 const summary={
  checkedAt:new Date().toISOString(),branch,verificationBaseCommit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),
- sourceHashes,currentCopy:snapshot,designAndStructure:'변경 없음',commands,
+ sourceHashes,currentCopy:snapshot,designAndStructure:'b078712 대비 변경 없음; 응시권 입력 유효성만 보완',historicalCommandChecks:commands,currentReview:JSON.parse(fs.readFileSync('artifacts/review-checks.json','utf8')),
  browser:{status:'통과',artifact:'artifacts/after-checks.json',sha256:sha256('artifacts/after-checks.json'),viewports:after.results.map(r=>({width:r.width,height:r.height}))},
  routes:{status:'통과',artifact:'artifacts/route-checks.json',sha256:sha256('artifacts/route-checks.json'),count:routes.length,scope:'인증 제출 없이 로그인 게이트와 next 보존까지'},
  consistency:{status:'통과',documents:docs,screenshots,method:'소스 기대값과 렌더링 문구·링크 대조 후 캡처; 캡처 파일 SHA-256 대조',historicalExclusions:['artifacts/before-checks.json','artifacts/screenshots/before-*.png','artifacts/screenshots/reference-*.png','artifacts/link-audit.json']},

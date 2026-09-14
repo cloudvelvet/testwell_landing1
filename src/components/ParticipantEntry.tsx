@@ -24,7 +24,7 @@ export function ParticipantEntry() {
         {hero.ticket}<ChevronDown size={20} aria-hidden="true" />
       </button>
       <p className="entry-note">{hero.ticketNote}</p>
-      <form id="ticket-form" className="ticket-form" hidden={!open} onSubmit={submitTicket}>
+      <form id="ticket-form" className="ticket-form" noValidate hidden={!open} onSubmit={submitTicket}>
         <label htmlFor="ticket-code">{ticketForm.label}</label>
         <input ref={inputRef} id="ticket-code" name="ticketCode" type="text" required autoComplete="off" autoCapitalize="none" spellCheck={false} placeholder={ticketForm.placeholder} onInput={event => event.currentTarget.setCustomValidity('')} />
         <button type="submit" className="primary-link">{ticketForm.submit}</button>

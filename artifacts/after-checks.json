@@ -1,18 +1,22 @@
 {
-  "date": "2026-09-08T05:00:17.805Z",
+  "date": "2026-09-14T03:52:44.339Z",
   "sourceHashes": {
-    "src/constants/content.ts": "9904f56556b472eabf3733022f04395c07b4499ec9cf7b2915e2bd6476cf474a",
-    "src/constants/links.ts": "696cb74e62fa257df98ebb5ab8bfed8cb98e357d795d900517e162ed794d9653",
-    "src/index.css": "9f725baf5a4ae1fb7e4cbdded445445f3df6c7cd8f942cee8e0eb499463e43a0",
+    "src/constants/content.ts": "54e3c862d32b46e0ccfe4e2733c1708e5ad337ee746d409a2f43a63ea88b3f1e",
+    "src/constants/links.ts": "1db040f23280c5c68167a69124a73635874930bb42ec6525c612492be7690a55",
+    "src/index.css": "f9bdac21c2d06660a499395122957fe02278aa3fef23bd1e1d4d112fd6ad66f6",
     "src/App.tsx": "924ace5cecb5abbec8e178a8707a1d462f78d8e0a828ecd41141aa3c77d1cb40",
     "src/components/MeasurementContext.tsx": "97d4e783bfa49c60f30ce8b6d63c1485de9edf216c936bde5e3859a3b070778b",
+    "src/components/Hero.tsx": "ae27a30340fa190241cad2921cb0d3cfa005050eeedbb359532dc89b8aa163f2",
+    "src/components/ParticipantEntry.tsx": "9794b3a8a88d046b99abb481742245e5eae3d2b9d4e067dc7af9ba894ea61a8a",
+    "src/components/ProductFlow.tsx": "85e2eb7b0995bbe59cfdba04e538d4b215b82d5696349c4eb06287d4a154bdc1",
+    "src/components/WhatIsTestWell.tsx": "25edcccacc7c7b984460cc8b45b61624bec8e25e756704625a047296c021e43b",
     "index.html": "35de7aa18f99ce3df047ff29eed7d442f86f3848eed9099c94012e8f80010402"
   },
   "results": [
     {
       "width": 390,
       "scrollWidth": 390,
-      "heroHeight": 573.421875,
+      "heroHeight": 787.015625,
       "headings": [
         {
           "level": 1,
@@ -20,23 +24,7 @@
         },
         {
           "level": 2,
-          "text": "참여할 검사가 있나요?"
-        },
-        {
-          "level": 2,
-          "text": "질문을 준비하고,\n검사로 구성합니다."
-        },
-        {
-          "level": 3,
-          "text": "질문과 문제를 준비합니다."
-        },
-        {
-          "level": 3,
-          "text": "문항을 하나의 검사로 모읍니다."
-        },
-        {
-          "level": 3,
-          "text": "참여할 사람들을 관리합니다."
+          "text": "검사 준비부터\n결과 확인까지."
         },
         {
           "level": 3,
@@ -97,20 +85,12 @@
           "href": "https://testwell.kr/q_bank/question"
         },
         {
-          "label": "내 검사 확인",
-          "href": "https://testwell.kr/survey/inventory"
+          "label": "검사 보기",
+          "href": "https://testwell.kr/"
         },
         {
-          "label": "질문 관리 열기",
-          "href": "https://testwell.kr/q_bank/question"
-        },
-        {
-          "label": "검사지 만들기",
-          "href": "https://testwell.kr/q_bank/paper"
-        },
-        {
-          "label": "그룹 관리 열기",
-          "href": "https://testwell.kr/survey/respondent_contact_group"
+          "label": "결과 확인",
+          "href": "https://testwell.kr/survey/my_status"
         },
         {
           "label": "검사를 찾고 싶다면공식 서비스에서 둘러보기",
@@ -150,7 +130,7 @@
         "primaryLabel": "검사 만들기",
         "primaryHref": "https://testwell.kr/q_bank/question",
         "creationNote": "로그인 후 질문 관리에서 시작하세요.",
-        "figureCaption": "문항을 모아 검사지를 구성하고, 참여할 사람은 그룹으로 관리할 수 있습니다. 필요한 작업부터 시작하세요.",
+        "featureLabels": "문항 작성 · 검사지 구성 · 참여자 관리 · 설문 배포 · 검사 참여 · 결과 확인",
         "measurementTitle": "검사의 목적에 맞게 문항을 구성하세요",
         "measurementDescription": "확인하려는 내용에 따라 필요한 문항이 달라집니다. 검사 목적을 먼저 정하고, 그 목적에 맞는 질문과 문제를 준비해 보세요.",
         "browseLabel": "공식 서비스에서 둘러보기",
@@ -168,18 +148,18 @@
       "screenshots": [
         {
           "file": "artifacts/screenshots/after-390.png",
-          "sha256": "c4ac94ff7630940fdf47959d9aadcf91e2758cef54e867b3a8e3f3c673ca746a"
+          "sha256": "4ef875547a58483802275f81405ce7396cb0013405f66c4795c8aac66746dcdd"
         },
         {
           "file": "artifacts/screenshots/hero-390.png",
-          "sha256": "3ec0008c66890a243d45a209647f0afdcbfc2625a5d16d5029e8939ea96653f5"
+          "sha256": "612b23c81a1e2eacb2e71c262f4ea18581e7792406b88d92f004525ecea96440"
         }
       ]
     },
     {
       "width": 768,
       "scrollWidth": 768,
-      "heroHeight": 497.859375,
+      "heroHeight": 572.015625,
       "headings": [
         {
           "level": 1,
@@ -187,23 +167,7 @@
         },
         {
           "level": 2,
-          "text": "참여할 검사가 있나요?"
-        },
-        {
-          "level": 2,
-          "text": "질문을 준비하고,\n검사로 구성합니다."
-        },
-        {
-          "level": 3,
-          "text": "질문과 문제를 준비합니다."
-        },
-        {
-          "level": 3,
-          "text": "문항을 하나의 검사로 모읍니다."
-        },
-        {
-          "level": 3,
-          "text": "참여할 사람들을 관리합니다."
+          "text": "검사 준비부터\n결과 확인까지."
         },
         {
           "level": 3,
@@ -264,20 +228,12 @@
           "href": "https://testwell.kr/q_bank/question"
         },
         {
-          "label": "내 검사 확인",
-          "href": "https://testwell.kr/survey/inventory"
+          "label": "검사 보기",
+          "href": "https://testwell.kr/"
         },
         {
-          "label": "질문 관리 열기",
-          "href": "https://testwell.kr/q_bank/question"
-        },
-        {
-          "label": "검사지 만들기",
-          "href": "https://testwell.kr/q_bank/paper"
-        },
-        {
-          "label": "그룹 관리 열기",
-          "href": "https://testwell.kr/survey/respondent_contact_group"
+          "label": "결과 확인",
+          "href": "https://testwell.kr/survey/my_status"
         },
         {
           "label": "검사를 찾고 싶다면공식 서비스에서 둘러보기",
@@ -317,7 +273,7 @@
         "primaryLabel": "검사 만들기",
         "primaryHref": "https://testwell.kr/q_bank/question",
         "creationNote": "로그인 후 질문 관리에서 시작하세요.",
-        "figureCaption": "문항을 모아 검사지를 구성하고, 참여할 사람은 그룹으로 관리할 수 있습니다. 필요한 작업부터 시작하세요.",
+        "featureLabels": "문항 작성 · 검사지 구성 · 참여자 관리 · 설문 배포 · 검사 참여 · 결과 확인",
         "measurementTitle": "검사의 목적에 맞게 문항을 구성하세요",
         "measurementDescription": "확인하려는 내용에 따라 필요한 문항이 달라집니다. 검사 목적을 먼저 정하고, 그 목적에 맞는 질문과 문제를 준비해 보세요.",
         "browseLabel": "공식 서비스에서 둘러보기",
@@ -335,18 +291,18 @@
       "screenshots": [
         {
           "file": "artifacts/screenshots/after-768.png",
-          "sha256": "56b38668ca14609d7b732f2114e7124e4e6039954ca99291e3fd1a851115d33b"
+          "sha256": "6b86a8270ea42c77c1f970a79f512b959b727ccd3540dbc55a3de221c389f842"
         },
         {
           "file": "artifacts/screenshots/hero-768.png",
-          "sha256": "125fef82a40b08dd054c4175e7a6f2113baa3bd51cbc4eb8751ea1cb8bf32b9d"
+          "sha256": "daa7bb0c554d2db4602c113918bf8aabdf994f6de6477c5b2656f60dea6c6c80"
         }
       ]
     },
     {
       "width": 1280,
       "scrollWidth": 1280,
-      "heroHeight": 549.390625,
+      "heroHeight": 551.390625,
       "headings": [
         {
           "level": 1,
@@ -354,23 +310,7 @@
         },
         {
           "level": 2,
-          "text": "참여할 검사가 있나요?"
-        },
-        {
-          "level": 2,
-          "text": "질문을 준비하고,\n검사로 구성합니다."
-        },
-        {
-          "level": 3,
-          "text": "질문과 문제를 준비합니다."
-        },
-        {
-          "level": 3,
-          "text": "문항을 하나의 검사로 모읍니다."
-        },
-        {
-          "level": 3,
-          "text": "참여할 사람들을 관리합니다."
+          "text": "검사 준비부터\n결과 확인까지."
         },
         {
           "level": 3,
@@ -431,20 +371,12 @@
           "href": "https://testwell.kr/q_bank/question"
         },
         {
-          "label": "내 검사 확인",
-          "href": "https://testwell.kr/survey/inventory"
+          "label": "검사 보기",
+          "href": "https://testwell.kr/"
         },
         {
-          "label": "질문 관리 열기",
-          "href": "https://testwell.kr/q_bank/question"
-        },
-        {
-          "label": "검사지 만들기",
-          "href": "https://testwell.kr/q_bank/paper"
-        },
-        {
-          "label": "그룹 관리 열기",
-          "href": "https://testwell.kr/survey/respondent_contact_group"
+          "label": "결과 확인",
+          "href": "https://testwell.kr/survey/my_status"
         },
         {
           "label": "검사를 찾고 싶다면공식 서비스에서 둘러보기",
@@ -484,7 +416,7 @@
         "primaryLabel": "검사 만들기",
         "primaryHref": "https://testwell.kr/q_bank/question",
         "creationNote": "로그인 후 질문 관리에서 시작하세요.",
-        "figureCaption": "문항을 모아 검사지를 구성하고, 참여할 사람은 그룹으로 관리할 수 있습니다. 필요한 작업부터 시작하세요.",
+        "featureLabels": "문항 작성 · 검사지 구성 · 참여자 관리 · 설문 배포 · 검사 참여 · 결과 확인",
         "measurementTitle": "검사의 목적에 맞게 문항을 구성하세요",
         "measurementDescription": "확인하려는 내용에 따라 필요한 문항이 달라집니다. 검사 목적을 먼저 정하고, 그 목적에 맞는 질문과 문제를 준비해 보세요.",
         "browseLabel": "공식 서비스에서 둘러보기",
@@ -502,18 +434,18 @@
       "screenshots": [
         {
           "file": "artifacts/screenshots/after-1280.png",
-          "sha256": "cf1a38d25197331c4cd6295442f7da187e15cb139810df9e9d93fa4110661c7e"
+          "sha256": "b66023f7c32da3be3951b106889afa09e38fca5171f8b387f98d2e5b2b535ea3"
         },
         {
           "file": "artifacts/screenshots/hero-1280.png",
-          "sha256": "36f5b8bc7ef23bb10dfca47d67a39216ea9b8fca043835264fffcbe583ccbbd8"
+          "sha256": "f007cdf391bc9a00439a4e448c058ec03ac5f627564303f0d58619949576ccc9"
         }
       ]
     },
     {
       "width": 1440,
       "scrollWidth": 1440,
-      "heroHeight": 555.703125,
+      "heroHeight": 557.703125,
       "headings": [
         {
           "level": 1,
@@ -521,23 +453,7 @@
         },
         {
           "level": 2,
-          "text": "참여할 검사가 있나요?"
-        },
-        {
-          "level": 2,
-          "text": "질문을 준비하고,\n검사로 구성합니다."
-        },
-        {
-          "level": 3,
-          "text": "질문과 문제를 준비합니다."
-        },
-        {
-          "level": 3,
-          "text": "문항을 하나의 검사로 모읍니다."
-        },
-        {
-          "level": 3,
-          "text": "참여할 사람들을 관리합니다."
+          "text": "검사 준비부터\n결과 확인까지."
         },
         {
           "level": 3,
@@ -598,20 +514,12 @@
           "href": "https://testwell.kr/q_bank/question"
         },
         {
-          "label": "내 검사 확인",
-          "href": "https://testwell.kr/survey/inventory"
+          "label": "검사 보기",
+          "href": "https://testwell.kr/"
         },
         {
-          "label": "질문 관리 열기",
-          "href": "https://testwell.kr/q_bank/question"
-        },
-        {
-          "label": "검사지 만들기",
-          "href": "https://testwell.kr/q_bank/paper"
-        },
-        {
-          "label": "그룹 관리 열기",
-          "href": "https://testwell.kr/survey/respondent_contact_group"
+          "label": "결과 확인",
+          "href": "https://testwell.kr/survey/my_status"
         },
         {
           "label": "검사를 찾고 싶다면공식 서비스에서 둘러보기",
@@ -651,7 +559,7 @@
         "primaryLabel": "검사 만들기",
         "primaryHref": "https://testwell.kr/q_bank/question",
         "creationNote": "로그인 후 질문 관리에서 시작하세요.",
-        "figureCaption": "문항을 모아 검사지를 구성하고, 참여할 사람은 그룹으로 관리할 수 있습니다. 필요한 작업부터 시작하세요.",
+        "featureLabels": "문항 작성 · 검사지 구성 · 참여자 관리 · 설문 배포 · 검사 참여 · 결과 확인",
         "measurementTitle": "검사의 목적에 맞게 문항을 구성하세요",
         "measurementDescription": "확인하려는 내용에 따라 필요한 문항이 달라집니다. 검사 목적을 먼저 정하고, 그 목적에 맞는 질문과 문제를 준비해 보세요.",
         "browseLabel": "공식 서비스에서 둘러보기",
@@ -669,11 +577,11 @@
       "screenshots": [
         {
           "file": "artifacts/screenshots/after-1440.png",
-          "sha256": "fed6f5d068e765b8cb6fd9b5758132f35ec3d58772cccec8f6f864e8a58de45a"
+          "sha256": "29be28eefd654c82fa7874eaf985a90e1c351edd459b4bb1d1cfb7392296e3d3"
         },
         {
           "file": "artifacts/screenshots/hero-1440.png",
-          "sha256": "5235f3bc8df537c53ec7aa8c6b1a20cb1a063dce6ea281830e4ee089129e1480"
+          "sha256": "45378b5f3daa268fe0ce2d803a34b365f05425671d865c97442f1296e5ed75a9"
         }
       ]
     }

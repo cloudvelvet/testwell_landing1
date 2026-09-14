@@ -17,10 +17,10 @@ function readExports(relativePath) {
 const content = readExports('src/constants/content.ts').SITE_CONTENT;
 const links = readExports('src/constants/links.ts').LINKS;
 function sha256(file) { return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'); }
-const sourceHashes = Object.fromEntries(['src/constants/content.ts','src/constants/links.ts','src/index.css','src/App.tsx','src/components/MeasurementContext.tsx','index.html'].map(file => [file, sha256(file)]));
+const sourceHashes = Object.fromEntries(['src/constants/content.ts','src/constants/links.ts','src/index.css','src/App.tsx','src/components/MeasurementContext.tsx','src/components/Hero.tsx','src/components/ParticipantEntry.tsx','src/components/ProductFlow.tsx','src/components/WhatIsTestWell.tsx','index.html'].map(file => [file, sha256(file)]));
 const snapshot = {
   heroDescription: content.hero.description, primaryLabel: content.hero.primary, primaryHref: links.questionBank,
-  creationNote: content.hero.note, figureCaption: content.capabilities.figureCaption,
+  creationNote: content.hero.note, featureLabels: content.capabilities.displayItems.join(' · '),
   measurementTitle: content.measurement.title, measurementDescription: content.measurement.description,
   browseLabel: content.finalCta.links.find(item => item.link === 'browseTests').action, browseHref: links.browseTests,
 };
