@@ -37,6 +37,7 @@ export const SITE_CONTENT = {
     submit: '검사 시작',
     note: 'TestWell 공식 서비스로 이동합니다.',
     emptyError: '응시권 코드를 입력해 주세요.',
+    invalidError: '받은 응시권 코드를 다시 확인해 주세요.',
   },
   // 4. 크림색 주요 기능 안내: title의 \n은 줄바꿈입니다.
   // displayItems는 왼쪽부터 아이콘 순서입니다. 개수(6개)와 순서를 유지하세요.

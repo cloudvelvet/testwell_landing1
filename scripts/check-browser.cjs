@@ -4,13 +4,15 @@ const assert = require('node:assert/strict');
 const { content, links, sourceHashes, snapshot, sha256 } = require('./current-source.cjs');
 // 브라우저 크기별 렌더링과 실제 키보드 경로를 확인한다.
 (async () => {
- const browser = await chromium.launch({channel:'chrome',headless:true});
+ const browser = await chromium.launch({headless:true, ...(process.env.PLAYWRIGHT_EXECUTABLE_PATH ? {executablePath:process.env.PLAYWRIGHT_EXECUTABLE_PATH} : {})});
+ fs.mkdirSync('output/verification/screenshots', {recursive:true});
  const results=[];
- for(const [width,height] of [[390,844],[768,1024],[1280,800],[1440,900]]) {
+ for(const [width,height] of [[320,740],[360,800],[390,844],[768,1024],[1024,900],[1280,800],[1440,900]]) {
   const page=await browser.newPage({viewport:{width,height},deviceScaleFactor:1,reducedMotion:'reduce'});
   const errors=[]; page.on('pageerror',e=>errors.push(e.message)); page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
-  await page.goto('http://127.0.0.1:5175/',{waitUntil:'networkidle'});
+  await page.goto(process.env.CHECK_URL || 'http://127.0.0.1:5175/',{waitUntil:'networkidle'});
   await page.evaluate(() => document.fonts.ready);
+  assert.ok(await page.evaluate(() => [...document.fonts].some(font => font.family.includes('Pretendard') && font.status === 'loaded')), '한국어 폰트 로드');
   assert.equal(await page.locator('.hero-description').innerText(), snapshot.heroDescription, 'Hero 문구 불일치');
   assert.equal(await page.locator('.creator-entry .primary-link').innerText(), snapshot.primaryLabel, '버튼 문구 불일치');
   assert.equal(await page.locator('.creator-entry .primary-link').getAttribute('href'), snapshot.primaryHref, '버튼 목적지 불일치');
@@ -42,6 +44,9 @@ const { content, links, sourceHashes, snapshot, sha256 } = require('./current-so
    const links=[...document.querySelectorAll('a')].map(e=>({label:e.textContent.trim(),href:e.getAttribute('href')}));
    return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,heroHeight:document.querySelector('#top').getBoundingClientRect().height,headings,brokenAnchors,smallText,inaccessibleSvg,imagesWithoutAlt,links,reduce:matchMedia('(prefers-reduced-motion: reduce)').matches};
   });
+  for (const circle of await page.locator('.capability-circle').all()) {
+    const box=await circle.boundingBox();assert.ok(Math.abs(box.width-box.height)<2,`원형 비율: ${width}px`);
+  }
   assert.equal(state.scrollWidth,width,'가로 넘침'); assert.equal(state.headings.filter(h=>h.level===1).length,1,'h1 개수');
   assert.ok(state.headings.every((h,i)=>i===0||h.level<=state.headings[i-1].level+1),'제목 단계');
   assert.deepEqual(state.brokenAnchors,[]);assert.deepEqual(state.smallText,[]);assert.equal(state.inaccessibleSvg,0);assert.equal(state.imagesWithoutAlt,0);assert.ok(state.reduce);
@@ -66,11 +71,28 @@ const { content, links, sourceHashes, snapshot, sha256 } = require('./current-so
   const code=page.getByLabel(content.ticketForm.label,{exact:true});
   assert.ok(await code.evaluate(e=>e===document.activeElement));
   await page.getByRole('button',{name:content.ticketForm.submit,exact:true}).click();
-  assert.equal(await code.evaluate(e=>e.validationMessage),content.ticketForm.emptyError);
+  assert.equal(await page.getByRole('alert').innerText(),content.ticketForm.emptyError);
+  assert.equal(await code.getAttribute('aria-invalid'),'true');
   await code.fill('   ');
   await page.getByRole('button',{name:content.ticketForm.submit,exact:true}).click();
-  assert.equal(await code.evaluate(e=>e.validationMessage),content.ticketForm.emptyError);
-  await code.fill('sample');assert.ok(await code.evaluate(e=>e.validity.valid));
+  assert.equal(await page.getByRole('alert').innerText(),content.ticketForm.emptyError);
+  assert.equal(await code.getAttribute('aria-invalid'),'true');
+  await code.fill('..');
+  await page.getByRole('button',{name:content.ticketForm.submit,exact:true}).click();
+  assert.equal(await page.getByRole('alert').innerText(),content.ticketForm.invalidError);
+  await code.fill('sample');assert.equal(await code.getAttribute('aria-invalid'),'false');
+  assert.equal(await page.getByRole('alert').count(),0);
+  await code.press('Escape');assert.equal(await ticketButton.getAttribute('aria-expanded'),'false');
+  assert.ok(await ticketButton.evaluate(e=>e===document.activeElement));
+  await ticketButton.click();
+  // Intercept navigation: never redeem a ticket or contact the live service.
+  let destination;
+  await page.route('https://testwell.kr/**',route=>{destination=route.request().url();return route.fulfill({status:200,contentType:'text/html',body:'<!doctype html><title>Intercepted test navigation</title>'});});
+  await code.fill('  sample/가?x#%  ');
+  await Promise.all([page.waitForURL(url=>url.href.startsWith(links.testByTicket)), page.getByRole('button',{name:content.ticketForm.submit,exact:true}).click()]);
+  assert.equal(destination,links.testByTicket+encodeURIComponent('sample/가?x#%'));
+  await page.goto(process.env.CHECK_URL || 'http://127.0.0.1:5175/',{waitUntil:'networkidle'});
+  await page.getByRole('button',{name:content.hero.ticket,exact:true}).click();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
   await ticketButton.click();
   await page.keyboard.press('Tab');
@@ -78,14 +100,14 @@ const { content, links, sourceHashes, snapshot, sha256 } = require('./current-so
   const focus=await page.locator('.creator-entry .primary-link').evaluate(e=>({style:getComputedStyle(e).outlineStyle,width:getComputedStyle(e).outlineWidth}));
   assert.equal(focus.style,'solid');assert.equal(focus.width,'3px');
   await page.evaluate(()=>{document.activeElement.blur();scrollTo(0,0);});
-  await page.screenshot({path:`artifacts/screenshots/after-${width}.png`,fullPage:true});
-  await page.screenshot({path:`artifacts/screenshots/hero-${width}.png`});
-  assert.deepEqual(errors,[],'콘솔 오류'); results.push({...state,height,errors,keyboard:'통과',focus,copy:snapshot,metadata:meta,screenshots:['after','hero'].map(kind => { const file=`artifacts/screenshots/${kind}-${width}.png`;return {file,sha256:sha256(file)}; })});await page.close();
+  await page.screenshot({path:`output/verification/screenshots/after-${width}.png`,fullPage:true});
+  await page.screenshot({path:`output/verification/screenshots/hero-${width}.png`});
+  assert.deepEqual(errors,[],'콘솔 오류'); results.push({...state,height,errors,keyboard:'통과',focus,copy:snapshot,metadata:meta,screenshots:['after','hero'].map(kind => { const file=`output/verification/screenshots/${kind}-${width}.png`;return {file,sha256:sha256(file)}; })});await page.close();
  }
  // 다크/밝은 면에 실제 사용하는 본문·버튼·포커스 색 대비.
  const luminance=h=>{const n=h.replace('#','').match(/../g).map(v=>parseInt(v,16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return n[0]*.2126+n[1]*.7152+n[2]*.0722;};
  const contrast=[];
- for(const [fg,bg] of [['#ffffff','#111111'],['#c6c6c6','#111111'],['#b8b8b8','#111111'],['#111111','#e9b20a'],['#55554f','#f6f2ea'],['#656159','#f6f2ea'],['#656159','#ede7db'],['#253858','#f6f2ea']]) {const a=luminance(fg),b=luminance(bg),ratio=(Math.max(a,b)+.05)/(Math.min(a,b)+.05);assert.ok(ratio>=4.5);contrast.push({fg,bg,ratio:+ratio.toFixed(2)});}
- fs.writeFileSync('artifacts/after-checks.json',JSON.stringify({date:new Date().toISOString(),sourceHashes,results,contrast},null,2));
+ for(const [fg,bg] of [['#ffffff','#111111'],['#c6c6c6','#111111'],['#b8b8b8','#111111'],['#111111','#e9b20a'],['#55554f','#f6f2ea'],['#656159','#f6f2ea'],['#656159','#ede7db'],['#253858','#f6f2ea'],['#ffb4a9','#111111']]) {const a=luminance(fg),b=luminance(bg),ratio=(Math.max(a,b)+.05)/(Math.min(a,b)+.05);assert.ok(ratio>=4.5);contrast.push({fg,bg,ratio:+ratio.toFixed(2)});}
+ fs.writeFileSync('output/verification/after-checks.json',JSON.stringify({date:new Date().toISOString(),sourceHashes,results,contrast},null,2));
  await browser.close();console.log(JSON.stringify({result:'통과',viewports:results.map(r=>({width:r.width,heroHeight:r.heroHeight})),contrast}));
 })().catch(e=>{console.error(e);process.exit(1);});
