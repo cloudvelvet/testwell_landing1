@@ -8,9 +8,17 @@ export function Hero() {
   return (
     <section id="top" className="hero" aria-labelledby="hero-title">
       <div className="page-width">
-        <p className="eyebrow hero-label">{hero.label}</p>
-        <h1 id="hero-title">{hero.title.map(line => <span key={line}>{line}</span>)}</h1>
-        <p className="hero-description">{hero.description}</p>
+        <div className="hero-intro">
+          <div className="hero-copy">
+            <p className="eyebrow hero-label">{hero.label}</p>
+            <h1 id="hero-title">{hero.title.map(line => <span key={line}>{line}</span>)}</h1>
+            <p className="hero-description">{hero.description}</p>
+          </div>
+          <picture className="hero-art" aria-hidden="true">
+            <source media="(min-width: 640px)" srcSet={`${import.meta.env.BASE_URL}testwell-assessment-illustration.webp`} />
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" width={1448} height={1086} alt="" decoding="async" />
+          </picture>
+        </div>
         <div className="hero-entries hero-action-grid">
           <div className="creator-entry">
             <a href={LINKS.questionBank} className="primary-link" aria-describedby="create-note">
