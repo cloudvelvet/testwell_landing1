@@ -29,7 +29,7 @@
 .hero-label { color: #E9B20A; }
 .hero h1 { font-size: clamp(36px,4.8vw,64px); line-height: 1.23; letter-spacing: -.045em; font-weight: 650; }
 .hero h1 span { display: block; }
-.hero-description { max-width: 740px; color: #c6c6c6; font-size: 18px; line-height: 1.8; margin-top: 26px; }
+.hero-description { white-space: pre-line; max-width: 740px; color: #c6c6c6; font-size: 18px; line-height: 1.8; margin-top: 26px; }
 .hero-intro { display: block; }
 .hero-copy { min-width: 0; }
 .hero-entries { display: grid; grid-template-columns: 1.15fr 1fr; gap: 72px; margin-top: 40px; align-items: start; }
