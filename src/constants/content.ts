@@ -24,7 +24,7 @@ export const SITE_CONTENT = {
     primary: '검사 만들기',
     note: '로그인 후 질문 관리에서 시작하세요.',
     ticket: '응시권 입력',
-    ticketNote: '받은 응시권 코드로 검사에 참여하세요.',
+    ticketNote: '응시권 코드를 입력하고 검사를 시작하세요.',
     browse: '검사 보기',
     browseNote: '공개된 검사를 둘러보세요.',
     result: '결과 확인',
