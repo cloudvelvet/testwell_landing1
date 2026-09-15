@@ -4,7 +4,7 @@ const assert=require('node:assert/strict');
 const { content, links, sourceHashes } = require('./current-source.cjs');
 // 로그인은 제출하지 않고 실제 CTA가 보존하는 목적지만 확인한다.
 (async()=>{
- const browser=await chromium.launch({headless:true});const results=[];
+ const browser=await chromium.launch({headless:true, ...(process.env.PLAYWRIGHT_EXECUTABLE_PATH ? {executablePath:process.env.PLAYWRIGHT_EXECUTABLE_PATH} : {})});const results=[];
  for(const [label,path,mobile] of [[content.hero.primary,links.questionBank,false],[content.header.nav.find(item=>item.link==='myTests').label,links.myTests,true],[content.header.nav.find(item=>item.link==='result').label,links.result,true]]){
   const page=await browser.newPage({viewport:mobile?{width:390,height:844}:{width:1280,height:800}});
   await page.goto(process.env.CHECK_URL || 'http://127.0.0.1:5175/',{waitUntil:'networkidle'});
@@ -13,5 +13,5 @@ const { content, links, sourceHashes } = require('./current-source.cjs');
   const url=new URL(page.url());assert.equal(url.searchParams.get('next'),new URL(path).pathname);
   results.push({checkedAt:new Date().toISOString(),sourceHashes,requestedUrl:path,label,viewport:mobile?'390':'1280',clicks:mobile?2:1,finalUrl:page.url(),loginSubmitted:false});await page.close();
  }
- await browser.close();fs.writeFileSync('artifacts/route-checks.json',JSON.stringify(results,null,2));console.log(JSON.stringify(results));
+ await browser.close();fs.mkdirSync('output/verification', {recursive:true});fs.writeFileSync('output/verification/route-checks.json',JSON.stringify(results,null,2));console.log(JSON.stringify(results));
 })().catch(e=>{console.error(e);process.exit(1)});
