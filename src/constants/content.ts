@@ -58,7 +58,7 @@ export const SITE_CONTENT = {
   finalCta: {
     label: '다음으로', title: '목적에 맞는 곳으로 이어집니다.',
     links: [
-      { title: '검사를 찾고 싶다면', action: '공식 서비스에서 둘러보기', link: 'browseTests' },
+      { title: '검사 둘러보기', action: '공식 서비스에서 둘러보기', link: 'browseTests' },
       { title: '이용 방법이 궁금하다면', action: 'TestWell에 문의하기', link: 'contact' },
     ],
   },
