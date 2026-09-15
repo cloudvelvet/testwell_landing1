@@ -76,7 +76,7 @@ h2 { font-size: clamp(28px,3vw,40px); letter-spacing: -.035em; line-height: 1.35
 .measurement-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 64px; align-items: start; }
 .measurement .eyebrow { margin-bottom: 12px; }
 .measurement h3 { font-size: 24px; max-width: 360px; line-height: 1.45; letter-spacing: -.025em; font-weight: 600; }
-.measurement .section-description { max-width: 590px; }
+.measurement .section-description { max-width: 590px; white-space: pre-line; }
 .next-section { padding: 60px 0; }
 .next-section .eyebrow { color: #b8b8b8; margin-bottom: 14px; }
 .next-section h2 { font-size: 28px; }
