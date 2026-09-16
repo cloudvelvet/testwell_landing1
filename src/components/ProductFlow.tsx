@@ -11,7 +11,7 @@ export function ProductFlow() {
         const Icon = FEATURE_ICONS[index];
         return (
           <li key={label} className="capability-circle">
-            <Icon size={32} strokeWidth={1.3} aria-hidden="true" />
+            <div className="feature-symbol"><Icon size={28} strokeWidth={1.4} aria-hidden="true" /></div>
             <span>{label}</span>
           </li>
         );

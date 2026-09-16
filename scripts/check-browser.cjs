@@ -18,13 +18,16 @@ const { content, links, sourceHashes, snapshot, sha256 } = require('./current-so
   assert.equal(await page.locator('.creator-entry .primary-link').getAttribute('href'), snapshot.primaryHref, '버튼 목적지 불일치');
   assert.equal(await page.locator('#create-note').innerText(), snapshot.creationNote);
   assert.deepEqual(await page.locator('.capability-circle span').allTextContents(), [...content.capabilities.displayItems]);
-  assert.equal(await page.locator('#measurement-title').innerText(), snapshot.measurementTitle);
-  assert.equal(await page.locator('.measurement .section-description').innerText(), snapshot.measurementDescription);
+  assert.equal(await page.locator('#history-title').innerText(), snapshot.historyTitle);
+  assert.deepEqual(await page.locator('.history-row dt').allTextContents(), content.history.entries.map(item => item.year));
+  assert.equal(await page.locator('#measurement-title').count(), 0);
+  assert.equal(await page.locator('.result-entry-button').count(),0);
+  const buttonColors=await page.locator('.hero-action-grid .primary-link').evaluateAll(nodes=>nodes.map(e=>getComputedStyle(e).backgroundColor));
+  assert.deepEqual(buttonColors,['rgb(233, 178, 10)','rgb(233, 178, 10)']);
   const expectedLinks = [
     ...content.header.nav.map(item => [item.label, links[item.link]]),
     [content.header.login, links.login], [content.hero.primary, links.questionBank],
-    [content.hero.browse, links.browseTests], [content.hero.result, links.result],
-    ...content.finalCta.links.map(item => [item.title + ' ' + item.action, links[item.link]]),
+    [content.hero.browse, links.browseTests],
     ...content.footer.links.map(item => [item.label, links[item.link]]),
   ];
   for (const [label, href] of expectedLinks) {
@@ -45,13 +48,13 @@ const { content, links, sourceHashes, snapshot, sha256 } = require('./current-so
    return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,heroHeight:document.querySelector('#top').getBoundingClientRect().height,headings,brokenAnchors,smallText,inaccessibleSvg,imagesWithoutAlt,links,reduce:matchMedia('(prefers-reduced-motion: reduce)').matches};
   });
   for (const circle of await page.locator('.capability-circle').all()) {
-    const box=await circle.boundingBox();assert.ok(Math.abs(box.width-box.height)<2,`원형 비율: ${width}px`);
+    const box=await circle.boundingBox();assert.ok(box.width>0 && box.x>=0 && box.x+box.width<=width,`기능 카드 넘침: ${width}px`);
   }
   assert.equal(state.scrollWidth,width,'가로 넘침'); assert.equal(state.headings.filter(h=>h.level===1).length,1,'h1 개수');
   assert.ok(state.headings.every((h,i)=>i===0||h.level<=state.headings[i-1].level+1),'제목 단계');
   assert.deepEqual(state.brokenAnchors,[]);assert.deepEqual(state.smallText,[]);assert.equal(state.inaccessibleSvg,0);assert.equal(state.imagesWithoutAlt,0);assert.ok(state.reduce);
-  assert.equal(await page.locator('input[type="search"]').count(),0,'이전 검색창');
-  assert.equal(await page.locator('#top a').count(),3,'Hero 링크는 세 개');
+  assert.equal(await page.locator('input[type="search"]').count(),0,'검색창 제거');
+  assert.equal(await page.locator('#top a').count(),2,'Hero 외부 링크는 두 개');
   await page.keyboard.press('Tab');
   assert.equal(await page.evaluate(()=>document.activeElement.textContent),'본문으로 건너뛰기');
   await page.keyboard.press('Enter');

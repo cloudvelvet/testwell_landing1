@@ -3,9 +3,8 @@ import { ChevronDown } from 'lucide-react';
 import { LINKS } from '@/constants/links';
 import { SITE_CONTENT } from '@/constants/content';
 
-export function ParticipantEntry() {
+export function ParticipantEntry({ open, onOpenChange }: { open: boolean; onOpenChange: (open: boolean) => void }) {
   const { hero, ticketForm } = SITE_CONTENT;
-  const [open, setOpen] = useState(false);
   const [error, setError] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -24,21 +23,26 @@ export function ParticipantEntry() {
       inputRef.current?.focus();
       return;
     }
-    window.location.assign(LINKS.testByTicket + encodeURIComponent(code));
+    const submitter = (event.nativeEvent as SubmitEvent).submitter as HTMLButtonElement | null;
+    const destination = submitter?.value === 'result' ? LINKS.resultByTicket : LINKS.testByTicket;
+    window.location.assign(destination + encodeURIComponent(code));
   }
   return (
     <div className="ticket-entry">
-      <button ref={triggerRef} type="button" className="secondary-entry-link" aria-expanded={open} aria-controls="ticket-form" aria-describedby="ticket-note" onClick={() => { setOpen(value => !value); setError(''); }}>
+      <button ref={triggerRef} type="button" className="secondary-entry-link" aria-expanded={open} aria-controls="ticket-form" aria-describedby="ticket-note" onClick={() => { onOpenChange(!open); setError(''); }}>
         {hero.ticket}<ChevronDown size={20} aria-hidden="true" />
       </button>
       <p id="ticket-note" className="entry-note">{hero.ticketNote}</p>
       <form id="ticket-form" className="ticket-form" noValidate hidden={!open} onSubmit={submitTicket} onKeyDown={event => {
-        if (event.key === 'Escape') { event.preventDefault(); setOpen(false); setError(''); triggerRef.current?.focus(); }
+        if (event.key === 'Escape') { event.preventDefault(); onOpenChange(false); setError(''); triggerRef.current?.focus(); }
       }}>
         <label htmlFor="ticket-code">{ticketForm.label}</label>
         <input ref={inputRef} id="ticket-code" name="ticketCode" type="text" required autoComplete="off" autoCapitalize="none" spellCheck={false} placeholder={ticketForm.placeholder} aria-invalid={Boolean(error)} aria-describedby={error ? 'ticket-error ticket-destination' : 'ticket-destination'} onInput={() => setError('')} />
         {error && <p id="ticket-error" className="ticket-error" role="alert">{error}</p>}
-        <button type="submit" className="primary-link">{ticketForm.submit}</button>
+        <div className="ticket-actions">
+          <button type="submit" name="action" value="test" className="primary-link">{ticketForm.submit}</button>
+          <button type="submit" name="action" value="result" className="ticket-result-button">{ticketForm.resultSubmit}</button>
+        </div>
         <p id="ticket-destination" className="entry-note">{ticketForm.note}</p>
       </form>
     </div>

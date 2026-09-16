@@ -1,6 +1,6 @@
 import { SITE_CONTENT } from '@/constants/content';
 import { ProductFlow } from '@/components/ProductFlow';
-import { MeasurementContext } from '@/components/MeasurementContext';
+import { History } from '@/components/History';
 
 export function WhatIsTestWell() {
   const { capabilities } = SITE_CONTENT;
@@ -12,7 +12,7 @@ export function WhatIsTestWell() {
           <p className="section-description">{capabilities.description}</p>
         </div>
         <ProductFlow />
-        <MeasurementContext />
+        <History />
       </div>
     </section>
   );

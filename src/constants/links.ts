@@ -5,6 +5,8 @@ export const LINKS = {
   officialSite: 'https://testwell.kr/',
   browseTests: 'https://testwell.kr/',
   myTests: 'https://testwell.kr/survey/inventory',
+  searchTests: 'https://testwell.kr/shop/sale-goods/search/title__contains/',
+  resultByTicket: 'https://testwell.kr/q_bank/test_result/',
   testByTicket: 'https://testwell.kr/q_bank/test_cat/',
   result: 'https://testwell.kr/survey/my_status',
   login: 'https://testwell.kr/authority/login?next=/',

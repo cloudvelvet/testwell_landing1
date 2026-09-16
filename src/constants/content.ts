@@ -24,17 +24,18 @@ export const SITE_CONTENT = {
     primary: '검사 만들기',
     note: '로그인 후 질문 관리에서 시작하세요.',
     ticket: '응시권 입력',
-    ticketNote: '응시권 코드를 입력하고 검사를 시작하세요.',
-    browse: '검사 보기',
-    browseNote: '공개된 검사를 둘러보세요.',
+    ticketNote: '응시권 코드로 검사에 참여하거나 결과를 확인하세요.',
+    browse: '검사하기',
+    browseNote: '나에게 필요한 검사를 찾아보세요.',
     result: '결과 확인',
-    resultNote: '참여한 검사의 결과를 확인하세요.',
+    resultNote: '응시권 코드로 검사 결과를 확인하세요.',
   },
+  search: { label: '검사 검색', placeholder: '찾으시는 검사 이름을 입력하세요', submit: '검색', category: '검사 종류', all: '전체 검사', psychology: '심리검사', learning: '학습검사', error: '검색할 검사 이름을 입력해 주세요.' },
   // 3. '응시권 입력' 버튼을 눌렀을 때 펼쳐지는 입력란
   ticketForm: {
     label: '응시권 코드',
     placeholder: '코드를 입력하세요',
-    submit: '검사 시작',
+    submit: '검사하기', resultSubmit: '결과확인',
     note: 'TestWell 공식 서비스로 이동합니다.',
     emptyError: '응시권 코드를 입력해 주세요.',
     invalidError: '받은 응시권 코드를 다시 확인해 주세요.',
@@ -48,11 +49,14 @@ export const SITE_CONTENT = {
     description: '문항을 준비하고 검사를 운영하는 일부터, 검사 참여와 결과 확인까지 지원합니다.',
     displayItems: ['문항 작성', '검사지 구성', '참여자 관리', '설문 배포', '검사 참여', '결과 확인'],
   },
-  // 5. 원형 기능 안내 아래의 짧은 설명
-  measurement: {
-    label: '문항을 준비하기 전에',
-    title: '검사의 목적에 맞게 문항을 구성하세요',
-    description: '확인하려는 내용에 따라 필요한 문항이 달라집니다.\n검사 목적을 먼저 정하고, 그 목적에 맞는 질문과 문제를 준비해 보세요.',
+  // 5. 연혁: 각 연도의 description에 실제 내용을 입력하세요. 미입력 시 빈 칸입니다.
+  history: {
+    title: '연혁',
+    entries: [
+      { year: '2026', description: '' },
+      { year: '2025', description: '' },
+      { year: '2024', description: '' },
+    ],
   },
   // 6. 하단 검정 영역: 검사 탐색과 문의 안내. link는 유지하세요.
   finalCta: {
@@ -70,6 +74,7 @@ export const SITE_CONTENT = {
       { label: '공식 소개', link: 'officialAbout' },
       { label: '이용약관', link: 'terms' },
       { label: '개인정보처리방침', link: 'privacy' },
+      { label: '문의하기', link: 'contact' },
     ],
     copyright: 'TestWell. 모든 권리 보유.',
   },
